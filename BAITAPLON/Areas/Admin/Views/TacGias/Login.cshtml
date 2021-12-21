@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("CheckLogin", "TacGias",FormMethod.Post))
+        {
+        <table>
+            <tr>
+                <td> @Html.Label("username", "Tên đăng nhập:")</td>
+                <td> @Html.TextBox("username")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("passwork", "Mật khẩu:")</td>
+                <td>@Html.Password("passwork")</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Đăng nhập" name="submit" /></td>
+                <td><input type="reset" value="Nhập lại" name="reset" /></td>
+            </tr>
+         </table>
+         <p>@ViewBag.error</p>
+        }
+</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="~/Content/Trangchu.css">
+    <title>TrangChu</title>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <ul>
+                <li><a href=""><i class="fab fa-facebook-f"></a></i></li>
+                <li><a href=""><i class="fab fa-google-plus-g"></a></i></li>
+                <li>HOTLINE:0346590614</li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="">ĐĂNG KÍ</a></li>
+                <li><a href="">ĐĂNG NHẬP</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="nav">
+        <div class="logo">
+            <a href=""><img src="~/Content/img/logo.png"></a>
+        </div>
+        <div class="sidebar" style="padding-left: 600px">
+            <ul>
+                <li><a href=""> Trang Chủ </a></li>
+                <li><a href=""> Giới Thiệu </a></li>
+                <li><a href=""> Đời Sống </a></li>
+                <li>
+                    <a href=""> Giải Trí</a>
+
+                </li>
+                <li><a href=""> Xã Hội </a></li>
+                <li><a href=""> Liên Hệ </a></li>
+                <li>
+                    <i class="fas fa-search"></i> <br>
+                    <div class="search-bar">
+                        <ul>
+                            <li><input type="text" name="" placeholder="Tìm Kiếm ..."><a href=""> <i class="fas fa-search"></i></a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li><i class="fas fa-shopping-cart"></i></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="main">
+        @RenderBody();
+    </div>
+
+    <div class="footer">
+        <footer class="page-footer font-small blue pt-4">
+
+
+            <div class="container-fluid text-center text-md-left">
+
+
+                <div class="row">
+
+
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+
+                        <img src="~/Content/img/logo.png">
+                        <p>
+                            <br>
+                            Email: demonhunter@gmail.com<br>
+                            Điện thoại: 0126 922 0162<br>
+                            Skype: demonhunterp
+                        </p>
+
+                    </div>
+
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+
+                        <h5 class="text-uppercase">Về Chúng Tôi</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Tổng quan về công ty</a>
+                            </li>
+                            <li>
+                                <a href="#!">Lịch sử hình thành</a>
+                            </li>
+                            <li>
+                                <a href="#!">Tầm nhìn – Sứ mệnh</a>
+                            </li>
+                            <li>
+                                <a href="#!">Câu chuyện thương hiệu</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+
+                        <h5 class="text-uppercase">Hỗ Trợ Khách Hàng</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Phiếu quà tặng</a>
+                            </li>
+                            <li>
+                                <a href="#!">Hướng dẫn chọn size</a>
+                            </li>
+                            <li>
+                                <a href="#!">Thẻ VIP</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="footer-copyright text-center py-3">
+                © 2020 Copyright:
+                <a href="https://www.facebook.com/thisisdung/"> NguyenHuuDung</a>
+            </div>
+
+
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/Trangchu.js"></script>
+</body>
+</html>

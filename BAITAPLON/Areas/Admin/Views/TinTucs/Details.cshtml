@@ -1,0 +1,40 @@
+﻿@model BAITAPLON.Areas.TinTuc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2 class="tintuc-h2-ct">Chi tiết</h2>
+
+<div>
+    <h4 class="tintuc-h4">Tin tức</h4>
+    <hr />
+    <table class="table">
+        <th width="7%">@Html.DisplayNameFor(model => model.LoaiTinTuc.Ten_LoaiTinTuc)</th>
+        <th width="10%"> @Html.DisplayNameFor(model => model.TacGia.Ten_Tac_Gia)</th>
+        <th width="8%">@Html.DisplayNameFor(model => model.Ngay_Dang)</th>
+        <th width="13%"> @Html.DisplayNameFor(model => model.Tieu_De)</th>
+        <th width="40%" >@Html.DisplayNameFor(model => model.Noi_Dung)</th>
+        <th width="7%">@Html.DisplayNameFor(model => model.img)</th>
+        <th width="8%">@Html.DisplayNameFor(model => model.Ngay_Cap_Nhat)</th>
+        <th width="7%">@Html.DisplayNameFor(model => model.Trang_Thai)</th>
+        <tr>
+            <td> @Html.DisplayFor(model => model.LoaiTinTuc.Ten_LoaiTinTuc)</td>
+            <td> @Html.DisplayFor(model => model.TacGia.Ten_Tac_Gia)</td>
+            <td> @Html.DisplayFor(model => model.Ngay_Dang)</td>
+            <td style="text-align: justify"> @Html.DisplayFor(model => model.Tieu_De)</td>
+            <td style="text-align: justify"> @Html.DisplayFor(model => model.Noi_Dung)</td>
+            <td>
+               
+                <img src="~/Areas/Admin/Data/img/@Model.img" alt="logo" width="100px" height="100px" />
+            </td>
+            <td>@Html.DisplayFor(model => model.Ngay_Cap_Nhat)</td>
+            <td>  @Html.DisplayFor(model => model.Trang_Thai)</td>
+        </tr>
+    </table>
+   
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_TinTuc }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

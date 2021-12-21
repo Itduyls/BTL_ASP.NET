@@ -1,0 +1,90 @@
+﻿@model IEnumerable<BAITAPLON.Areas.TacGia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h4 style="margin-left:10px">Home/ @ViewBag.tacgia</h4>
+    <div style="border:3px solid blue; border-radius:4px;margin-left:5px; margin-right:5px; padding:0px">
+        <p class="viewbag-tintuc" style="height:60px;background-color:cornflowerblue; line-height:60px; font-size:24px; padding-left:10px">@ViewBag.tacgia</p>
+
+        <form class="themtin"  action="~/Areas/Admin/Views/TacGias/Create.cshtml">
+            <input class="tintuc-create"  type="submit" value="Thêm tác giả" name="create" />
+        </form>
+
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ten_Tac_Gia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Chucvu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Avatar)
+                </th>
+                @if (ViewBag.chucvu == "Quản lý")
+                {
+                    <th>
+                        @Html.DisplayNameFor(model => model.Username)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Passwork)
+                    </th>
+                }
+                    <th>Tùy chọn</th>
+                </tr>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten_Tac_Gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chucvu)
+            </td>
+            <td>
+                <img src="@item.Avatar" alt="avt" width="250px" height="250px" />
+            </td>
+            @if (ViewBag.chucvu == "Quản lý")
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Passwork)
+                </td>
+            }
+        <td>
+            <form class="details" action="Details/@item.Id_Tac_Gia">
+                <input class="details-input" type="submit" value="Chi tiết" name="details" />
+            </form>
+            @if (ViewBag.user == item.Ten_Tac_Gia || ViewBag.chucvu == "Quản lý")
+            {
+                <form class="details" action="Edit/@item.Id_Tac_Gia">
+                    <input class="edit-input" type="submit" value="Chỉnh sửa" name="edit" />
+                </form>
+            }
+            @if (ViewBag.chucvu == "Quản lý")
+            {
+                <form class="details" action="Delete/@item.Id_Tac_Gia">
+                    <input class="delete-input" type="submit" value="Xóa" name="delete" />
+                </form>
+            }
+
+            </td>
+            </tr>
+            }
+
+        </table>
+        </div>
+</div>
