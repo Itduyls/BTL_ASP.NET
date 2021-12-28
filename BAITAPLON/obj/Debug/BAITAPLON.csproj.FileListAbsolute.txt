@@ -245,3 +245,5 @@ E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAI
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\obj\Debug\BAITAPLON.csproj.CoreCompileInputs.cache
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\obj\Debug\BAITAPLON.dll
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\obj\Debug\BAITAPLON.pdb
+E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\CKFinder.dll
+E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\CKFinder.pdb

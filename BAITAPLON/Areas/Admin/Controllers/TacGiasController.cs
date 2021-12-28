@@ -17,6 +17,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TacGias
         public ActionResult Index()
         {
+
             if (TempData.ContainsKey("username"))
             {
                 ViewBag.user = TempData["username"].ToString();
@@ -29,6 +30,12 @@ namespace BAITAPLON.Areas.Admin.Controllers
 
             }
             TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             ViewBag.tacgia = "Tác giả";
             return View(db.TacGias.ToList());
         }
@@ -36,6 +43,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TacGias/Details/5
         public ActionResult Details(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -51,6 +76,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TacGias/Create
         public ActionResult Create()
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             return View();
         }
 
@@ -63,6 +106,16 @@ namespace BAITAPLON.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                var f = Request.Files["ImageFile"];
+                if (f != null && f.ContentLength > 0)
+                {
+                    string FileName = System.IO.Path.GetFileName(f.FileName);
+                    TempData["file"] = FileName;
+                    string UploadPath = Server.MapPath("~/Areas/Admin/assets/img/" + FileName);
+                    f.SaveAs(UploadPath);
+                    tacGia.Avatar = FileName;
+
+                }
                 db.TacGias.Add(tacGia);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -74,6 +127,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TacGias/Edit/5
         public ActionResult Edit(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -93,18 +164,57 @@ namespace BAITAPLON.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id_Tac_Gia,Ten_Tac_Gia,Email,Chucvu,Avatar,Username,Passwork")] TacGia tacGia)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(tacGia).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    var f = Request.Files["ImageFile"];
+                    if (f != null && f.ContentLength > 0)
+                    {
+                        string FileName = System.IO.Path.GetFileName(f.FileName);
+                        string UploadPath = Server.MapPath("~/Areas/Admin/assets/img/" + FileName);
+                        f.SaveAs(UploadPath);
+                        tacGia.Avatar = FileName;
+                    }
+                    
+                     
+                    
+                    db.Entry(tacGia).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+             
+                return View(tacGia);
             }
-            return View(tacGia);
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Đã xảy ra lỗi! " + ex.Message;
+           
+                return View(tacGia);
+            }
         }
 
         // GET: Admin/TacGias/Delete/5
         public ActionResult Delete(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -153,7 +263,8 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 {
                     TempData["username"] = item.Ten_Tac_Gia;
                     TempData["chucvu"] = item.Chucvu;
-                    return RedirectToAction("Index", "Home");
+                    TempData["avatar"] = item.Avatar;
+                    return RedirectToAction("Index", "TinTucs");
                 }
             }
             ViewBag.error = "Tài khoản hoặc mật khẩu không đúng";

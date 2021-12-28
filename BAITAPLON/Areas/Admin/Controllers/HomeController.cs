@@ -17,6 +17,12 @@ namespace BAITAPLON.Areas.Admin.Controllers
 
             }
             TempData.Keep("username");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             return View();
         }
         public ActionResult Tintuc()

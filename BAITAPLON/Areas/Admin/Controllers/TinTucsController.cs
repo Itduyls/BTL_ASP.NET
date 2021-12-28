@@ -24,6 +24,18 @@ namespace BAITAPLON.Areas.Admin.Controllers
 
             }
             TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             ViewBag.tintuc = "Tất cả tin tức";
             ViewBag.sobaiviet = tinTucs.ToList().Count();
             ViewData["stt"] = 1;
@@ -33,6 +45,23 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TinTucs/Details/5
         public ActionResult Details(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -48,6 +77,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TinTucs/Create
         public ActionResult Create()
         {
+             if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             ViewBag.Id_LoaiTinTuc = new SelectList(db.LoaiTinTucs, "Id_LoaiTinTuc", "Ten_LoaiTinTuc");
             ViewBag.Id_Tac_Gia = new SelectList(db.TacGias, "Id_Tac_Gia", "Ten_Tac_Gia");
             return View();
@@ -58,12 +105,14 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "Id_TinTuc,Id_LoaiTinTuc,Ngay_Dang,Tieu_De,Noi_Dung,img,Ngay_Cap_Nhat,Trang_Thai,Id_Tac_Gia")] TinTuc tinTuc)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
+
                     var f = Request.Files["ImageFile"];
                     if (f != null && f.ContentLength > 0)
                     {
@@ -74,7 +123,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
                         tinTuc.img = FileName;
                     }
                     tinTuc.Ngay_Dang = DateTime.Now;
-
+                    tinTuc.Trang_Thai = "Chưa duyệt";
                     db.TinTucs.Add(tinTuc);
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -95,6 +144,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TinTucs/Edit/5
         public ActionResult Edit(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -114,10 +181,22 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "Id_TinTuc,Id_LoaiTinTuc,Ngay_Dang,Tieu_De,Noi_Dung,img,Ngay_Cap_Nhat,Trang_Thai,Id_Tac_Gia")] TinTuc tinTuc)
         {
             if (ModelState.IsValid)
             {
+                var f = Request.Files["ImageFile"];
+                if (f != null && f.ContentLength > 0)
+                {
+                    string FileName = System.IO.Path.GetFileName(f.FileName);
+                    TempData["file"] = FileName;
+                    string UploadPath = Server.MapPath("~/Areas/Admin/Data/img/" + FileName);
+                    f.SaveAs(UploadPath);
+                    tinTuc.img = FileName;
+                  
+                }
+                tinTuc.Ngay_Cap_Nhat = DateTime.Now;
                 db.Entry(tinTuc).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -130,6 +209,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TinTucs/Delete/5
         public ActionResult Delete(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -180,9 +277,21 @@ namespace BAITAPLON.Areas.Admin.Controllers
 
             }
             TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             ViewBag.tintuc = "Tin tức thời sự";
             ViewBag.sobaiviet = li.Count();
-            return View("Index",li) ;
+            return View(li) ;
         }
         public ActionResult Giaoduc()
         {
@@ -201,9 +310,21 @@ namespace BAITAPLON.Areas.Admin.Controllers
 
             }
             TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             ViewBag.tintuc = "Tin tức giáo dục";
             ViewBag.sobaiviet = li.Count();
-            return View("Index", li);
+            return View("Thoisu", li);
         }
         public ActionResult Doisong()
         {
@@ -216,15 +337,27 @@ namespace BAITAPLON.Areas.Admin.Controllers
                     li.Add(item);
                 }
             }
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
             if (TempData.ContainsKey("username"))
             {
                 ViewBag.user = TempData["username"].ToString();
 
             }
             TempData.Keep("username");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             ViewBag.tintuc = "Tin tức đời sống";
             ViewBag.sobaiviet = li.Count();
-            return View("Index", li);
+            return View("Thoisu", li);
         }
     }
 }

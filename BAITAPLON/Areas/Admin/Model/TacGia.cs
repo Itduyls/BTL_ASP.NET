@@ -22,6 +22,7 @@
 
         [StringLength(50)]
         [DisplayName("Tác Giả")]
+        [Column(TypeName = "Ntext")]
         public string Ten_Tac_Gia { get; set; }
 
         [StringLength(30)]
@@ -29,6 +30,7 @@
         public string Email { get; set; }
         [StringLength(200)]
         [DisplayName("Chức Vụ")]
+        [Column(TypeName = "Ntext")]
         public string Chucvu { get; set; }
 
         [StringLength(100)]

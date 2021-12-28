@@ -29,6 +29,12 @@ namespace BAITAPLON.Areas.Admin.Controllers
 
             }
             TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             ViewBag.nguoidung = "Người dùng";
             return View(db.NguoiDungs.ToList());
         }
@@ -36,6 +42,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/NguoiDungs/Details/5
         public ActionResult Details(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -51,6 +75,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/NguoiDungs/Create
         public ActionResult Create()
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             return View();
         }
 
@@ -63,6 +105,16 @@ namespace BAITAPLON.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                var f = Request.Files["ImageFile"];
+                if (f != null && f.ContentLength > 0)
+                {
+                    string FileName = System.IO.Path.GetFileName(f.FileName);
+                    TempData["file"] = FileName;
+                    string UploadPath = Server.MapPath("~/Areas/Admin/assets/img/" + FileName);
+                    f.SaveAs(UploadPath);
+                    nguoiDung.Avatar = FileName;
+
+                }
                 db.NguoiDungs.Add(nguoiDung);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -74,6 +126,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/NguoiDungs/Edit/5
         public ActionResult Edit(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -95,6 +165,16 @@ namespace BAITAPLON.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                var f = Request.Files["ImageFile"];
+                if (f != null && f.ContentLength > 0)
+                {
+                    string FileName = System.IO.Path.GetFileName(f.FileName);
+                    TempData["file"] = FileName;
+                    string UploadPath = Server.MapPath("~/Areas/Admin/assets/img/" + FileName);
+                    f.SaveAs(UploadPath);
+                    nguoiDung.Avatar = FileName;
+
+                }
                 db.Entry(nguoiDung).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -105,6 +185,24 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/NguoiDungs/Delete/5
         public ActionResult Delete(int? id)
         {
+            if (TempData.ContainsKey("username"))
+            {
+                ViewBag.user = TempData["username"].ToString();
+
+            }
+            TempData.Keep("username");
+            if (TempData.ContainsKey("chucvu"))
+            {
+                ViewBag.chucvu = TempData["chucvu"].ToString();
+
+            }
+            TempData.Keep("chucvu");
+            if (TempData.ContainsKey("avatar"))
+            {
+                ViewBag.avatar = TempData["avatar"].ToString();
+
+            }
+            TempData.Keep("avatar");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

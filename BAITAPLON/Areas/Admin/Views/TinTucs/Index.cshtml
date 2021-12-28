@@ -2,10 +2,10 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    Layout = "~/Areas/Admin/Views/Home/Index.cshtml";
 }
 <div>
-    <h4 style="margin-left:10px">Home/ @ViewBag.tintuc</h4>
+   
     <div class="body-content-2">
         <p class="viewbag-tintuc" style="height:60px;background-color:cornflowerblue; line-height:60px; font-size:24px; padding-left:10px">@ViewBag.tintuc</p>
         <form class="themtin" action="Create">
@@ -77,20 +77,37 @@
                         <form class="details" action="Details/@item.Id_TinTuc">
                             <input class="details-input" type="submit" value="Chi tiết" name="details" />
                         </form>
-                        @if (ViewBag.user == item.TacGia.Ten_Tac_Gia)
+                        @if ((ViewBag.user == item.TacGia.Ten_Tac_Gia && item.Trang_Thai == "Chưa duyệt") || ViewBag.chucvu == "Quản lý")
                         {
                             <form class="details" action="Edit/@item.Id_TinTuc">
                                 <input class="edit-input" type="submit" value="Chỉnh sửa" name="edit" />
                             </form>
-                            <form class="details" action="Delete/@item.Id_TinTuc">
-                                <input class="delete-input" type="submit" value="Xóa" name="delete" />
+
+                            <form onsubmit="return deleteNew()" class="delete" action="Delete?id=@item.Id_TinTuc" method="post">
+                                @Html.AntiForgeryToken()
+
+                                <input type="submit" class="delete-input"  value="Xóa" />
+
                             </form>
+                            
                         }
                     </td>
                 </tr>
+
             }
 
         </table>
        
     </div>
 </div>
+<script>
+    function deleteNew() {
+       
+        if (confirm("Bạn chắc chắn muốn xóa ") == true) {
+            return true;
+        }
+        return false;
+        
+
+    }
+</script>

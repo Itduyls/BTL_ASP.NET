@@ -58,13 +58,13 @@ values(1,'12/12/2021',N'Biển Đông sắp đón bão, có thể đổ bộ mi�
 
 Trung tâm Dự báo khí tượng thủy văn quốc gia dự báo, trong 1-2 ngày tới, áp dụng thấp nhiệt đới có khả năng mạnh lên thành bão. Khoảng ngày 16-17/12, bão có cường độ mạnh, đi vào vùng biển phía Nam Biển Đông và trở thành bão số 9 trong năm 2021, ảnh hưởng đến khu vực giữa và Nam Biển Đông (bao gồm vùng biển quần đảo Trường Sa).
 
-Khoảng ngày 19-20/12, bão có khả năng ảnh hưởng trực tiếp đến đất liền các tỉnh Trung Trung Bộ và Nam Trung Bộ.','bao.png',N'Đã duyệt',1),(2,'12/12/2021',N'Cụ ông gọi nồi lẩu rồi ngồi đợi 3 tiếng không đụng đũa, phía sau là chuyện xúc động',N'Chị Trần chủ cửa hàng ăn (Hồ Bắc, Trung Quốc) cho biết, vào ngày 4/12 vừa qua, có một cụ ông khoảng 70 tuổi vào quán gọi một nồi lẩu. Cụ ông đã đến quán nhiều lần nhưng chỉ gọi cơm. Hôm đó là đặc biệt.
+Khoảng ngày 19-20/12, bão có khả năng ảnh hưởng trực tiếp đến đất liền các tỉnh Trung Trung Bộ và Nam Trung Bộ.','bao.jpg',N'Đã duyệt',1),(2,'12/12/2021',N'Cụ ông gọi nồi lẩu rồi ngồi đợi 3 tiếng không đụng đũa, phía sau là chuyện xúc động',N'Chị Trần chủ cửa hàng ăn (Hồ Bắc, Trung Quốc) cho biết, vào ngày 4/12 vừa qua, có một cụ ông khoảng 70 tuổi vào quán gọi một nồi lẩu. Cụ ông đã đến quán nhiều lần nhưng chỉ gọi cơm. Hôm đó là đặc biệt.
 
-Thấy ông ăn mặc giản dị, có vẻ không có nhiều tiền nên chị Trần  chuẩn bị cho ông một suất lẩu 20 tệ (hơn 70 nghìn đồng). Tuy nhiên, ông yêu cầu chị làm một nồi lẩu thịnh soạn, nhiều món hơn và đắt hơn. Ông còn mua thêm một bình rượu và nói với chị việc mình muốn mời khách.','chuyenla.png',N'Đã duyệt',2)
+Thấy ông ăn mặc giản dị, có vẻ không có nhiều tiền nên chị Trần  chuẩn bị cho ông một suất lẩu 20 tệ (hơn 70 nghìn đồng). Tuy nhiên, ông yêu cầu chị làm một nồi lẩu thịnh soạn, nhiều món hơn và đắt hơn. Ông còn mua thêm một bình rượu và nói với chị việc mình muốn mời khách.','chuyenla.jpg',N'Đã duyệt',2)
 go
 create table NguoiDung(
 	Id_NguoiDung int primary key identity,
-	Ten_NguoiDung nvarchar(50),
+	Ten_NguoiDung nvarchar(100),
 	Email nvarchar(30),
 	Avatar nvarchar(100),
 	Username nvarchar(30),

@@ -15,7 +15,10 @@
     <link rel="stylesheet" type="text/css" href="~/Areas/Admin/assets\lib\jqvmap\jqvmap.min.css">
     <link rel="stylesheet" type="text/css" href="~/Areas/Admin/assets\lib\datetimepicker\css\bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="~/Areas/Admin/assets\css\app.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Areas/Admin/assets/fontawesome-5.15.1/css/all.css" />
 </head>
+
 <body>
     <div class="be-wrapper be-fixed-sidebar">
         <nav class="navbar navbar-expand fixed-top be-top-header">
@@ -23,11 +26,11 @@
                 <div class="be-navbar-header">
                     <img src="~/Areas/Admin/assets/img/logo.png" alt="aaa" style="margin-left:auto; margin-right:auto" height="50px" />
                 </div>
-                <div class="page-title"><span>Tin cậy - Chính xác- Nhanh chóng</span></div>
+                <div class="page-title"><span>Tin cậy - Chính xác - Nhanh chóng</span></div>
                 <div class="be-right-navbar">
                     <ul class="nav navbar-nav float-right be-user-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="~/Areas/Admin/assets\img\avatar.png" alt="Avatar"><span class="user-name">Túpac Amaru</span></a>
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="~/Areas/Admin/assets\img\@ViewBag.avatar" alt="Avatar"></a>
                             <div class="dropdown-menu" role="menu">
                                 <div class="user-info">
                                     <div class="user-name">@ViewBag.user</div>
@@ -53,7 +56,7 @@
                                 <li class="divider">Menu</li>
                                 <li class="active">
 
-                                    <a href="@Url.Action("Index","Home")"><i class="icon mdi mdi-home"></i>Trang chủ</a>
+                                    <a href="@Url.Action("Index","TinTucs")"><i class="icon mdi mdi-home"></i>Trang chủ</a>
                                 </li>
                                 <li class="parent">
                                     <a href="#"><i class="icon mdi mdi-layers"></i><span>Quản lý tin tức</span></a>
@@ -87,11 +90,52 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
         <div class="be-content">
-          
+            <div class="m-chart">
+                <div class="m-truycap"><canvas id="truycap"></canvas></div>
+                <div class="m-baiviet"><canvas id="baiviet"></canvas></div>
+                <div class="m-nguoidung"><span class="user-icon"><i class="fas fa-users"></i></span>Số người dùng:</div>
+                <div class="m-tacgia"><span class="user-icon"><i class="fas fa-users-cog"></i></span> Số tác giả:</div>
+            </div>
+            <div class="m-all-news">
+                @RenderBody()
+                </div>
+            <script>
+                // line chart data
+                var x = [ 'T2', 'T3', 'T4', 'T5', 'T6'];
+                var y = [ 2, 4, 6, 8, 10];
+
+
+                   
+              
+                var CHART = document.getElementById('truycap').getContext('2d');
+                var line_chart = new Chart(CHART, {
+                    type: 'line',
+                    data: {
+                        labels: x,
+                        datasets: [{
+                            label: 'Lượt truy cập',
+                            data: y
+                        }]
+                    }
+                })
+                var CHART_BaiViet = document.getElementById('baiviet').getContext('2d');
+                var line_chart = new Chart(CHART_BaiViet, {
+                    type: 'bar',
+                    data: {
+                        labels: x,
+                        datasets: [{
+                            label: 'Bài viết',
+                            data: y
+                        }]
+                    }
+                })
+                //chart bai viet
+                
+            </script>
         </div>
         <nav class="be-right-sidebar">
             <div class="sb-content">

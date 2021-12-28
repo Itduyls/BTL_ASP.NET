@@ -20,23 +20,30 @@
         [DisplayName("ID Tin Tức")]
         public int Id_TinTuc { get; set; }
         [DisplayName("Loại Tin Tức")]
+
         public int Id_LoaiTinTuc { get; set; }
         [DisplayName("Ngày Đăng")]
 
         [Column(TypeName = "date")]
+        
         public DateTime Ngay_Dang { get; set; }
 
         [StringLength(100)]
         [DisplayName("Tiêu Đề Bài Viết")]
         [Column(TypeName = "Ntext")]
+
+        [Required(ErrorMessage = "Tiêu đề không được để trống!")]
+
         public string Tieu_De { get; set; }
         [DisplayName("Nội Dung")]
 
         [Column(TypeName = "Ntext")]
+        [Required(ErrorMessage = "Nội dung không được để trống!")]
         public string Noi_Dung { get; set; }
 
         [StringLength(100)]
         [DisplayName("Ảnh Đại Diện")]
+     
         public string img { get; set; }
 
         [Column(TypeName = "date")]
