@@ -29,11 +29,11 @@
         public DateTime Ngay_Dang { get; set; }
 
         [StringLength(100)]
+        [Required(ErrorMessage = "Tiêu đề không được để trống!")]
         [DisplayName("Tiêu Đề Bài Viết")]
         [Column(TypeName = "Ntext")]
 
-        [Required(ErrorMessage = "Tiêu đề không được để trống!")]
-
+      
         public string Tieu_De { get; set; }
         [DisplayName("Nội Dung")]
 
@@ -43,7 +43,9 @@
 
         [StringLength(100)]
         [DisplayName("Ảnh Đại Diện")]
-     
+
+
+        [Required(ErrorMessage = "Ảnh không được để trống!")]
         public string img { get; set; }
 
         [Column(TypeName = "date")]

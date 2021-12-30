@@ -26,11 +26,11 @@
 
 
         // Đây là thiết lập đường dẫn lưu file
-        BaseUrl ="/";
+        BaseUrl ="/Data";
 
         // The phisical directory in the server where the file will end up. If
         // blank, CKFinder attempts to resolve BaseUrl.
-        BaseDir = HttpContext.Current.Server.MapPath("/DATA");
+        BaseDir = HttpContext.Current.Server.MapPath("/Data");
 
 
         // Optional: enable extra plugins (remember to copy .dll files first).

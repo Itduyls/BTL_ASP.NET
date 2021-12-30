@@ -23,6 +23,7 @@
         [StringLength(50)]
         [DisplayName("Tên Người Dùng")]
         [Column(TypeName = "Ntext")]
+        [Required(ErrorMessage = "Tên người dùng không được để trống!")]
         public string Ten_NguoiDung { get; set; }
 
         [StringLength(30)]
@@ -31,14 +32,17 @@
 
         [StringLength(100)]
         [DisplayName("Ảnh Đại Diện")]
+        [Required(ErrorMessage = "Ảnh không được để trống!")]
         public string Avatar { get; set; }
 
         [StringLength(30)]
         [DisplayName("Tên Đăng Nhập")]
+        [Required(ErrorMessage = "Tên đăng nhập không được để trống!")]
         public string Username { get; set; }
 
         [StringLength(30)]
         [DisplayName("Mật Khẩu")]
+        [Required(ErrorMessage = "Mật khẩu không được để trống!")]
         public string Passwork { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -42,7 +42,7 @@ create table TinTuc(
 	Id_LoaiTinTuc int not null,
 	Ngay_Dang date not null,
 	Tieu_De nvarchar(500),
-	Noi_Dung nvarchar(2000),
+	Noi_Dung nvarchar(MAX),
 	img nvarchar(100),
 	Ngay_Cap_Nhat date,
 	Trang_Thai nvarchar(50),
@@ -71,9 +71,9 @@ create table NguoiDung(
 	Passwork nvarchar(30)
 	)
 insert into NguoiDung		  
-values('Nguyễn Hữu Tuấn','tuan@gmail.com',N'avatar2.png','nguyenhuudung','1')
+values(N'Nguyễn Hữu Tuấn','tuan@gmail.com',N'avatar2.png','nguyenhuudung','1')
 insert into NguoiDung
-values('Hứa Văn Đức','Duc@gmail.com',N'avatar3.png','huavanduy','1')
+values(N'Hứa Văn Đức','Duc@gmail.com',N'avatar3.png','huavanduy','1')
 
 create table BinhLuan(
 	Id_Binh_Luan int primary key identity,

@@ -14,14 +14,14 @@
 <div class="form-horizontal">
     <h4 class="tintuc-h4">Tác giả</h4>
     <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.ValidationSummary(true, "", new { @class = "text-danger1" })
     @Html.HiddenFor(model => model.Id_Tac_Gia)
 
     <div class="form-group">
         @Html.LabelFor(model => model.Ten_Tac_Gia, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Ten_Tac_Gia, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Ten_Tac_Gia, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.Ten_Tac_Gia, "", new { @class = "text-danger1" })
         </div>
     </div>
 
@@ -29,7 +29,7 @@
         @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger1" })
         </div>
     </div>
     @{  int dem = 0;
@@ -49,7 +49,7 @@
                     <option>Quản lý</option>
                     <option>Tác giả</option>
                 </select>
-                @Html.ValidationMessageFor(model => model.Chucvu, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Chucvu, "", new { @class = "text-danger1" })
             </div>
         </div>
     }
@@ -68,7 +68,7 @@
          src="@Url.Content(ImagePath)" />
     <p><label for="ufile" style="cursor:pointer;">Chọn file ảnh</label></p>
     @Html.HiddenFor(model=>model.Avatar)
-    <input name="ImageFile" id="ufile" type="file" style="display:none;" onchange="loadFile(event)">
+    <input name="Avatar" id="ufile" type="file" style="display:none;" onchange="loadFile(event)">
 </div>
         </div>
 
@@ -76,7 +76,7 @@
             @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger1" })
             </div>
         </div>
 
@@ -84,7 +84,7 @@
             @Html.LabelFor(model => model.Passwork, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Passwork, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Passwork, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Passwork, "", new { @class = "text-danger1" })
             </div>
         </div>
 

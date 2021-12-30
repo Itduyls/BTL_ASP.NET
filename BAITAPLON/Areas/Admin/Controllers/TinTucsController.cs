@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BAITAPLON.Areas;
-
+using PagedList;
 namespace BAITAPLON.Areas.Admin.Controllers
 {
     public class TinTucsController : Controller
@@ -15,53 +15,45 @@ namespace BAITAPLON.Areas.Admin.Controllers
         private Model1 db = new Model1();
 
         // GET: Admin/TinTucs
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+            ViewBag.nguoidung = db.NguoiDungs.ToList().Count;
+            ViewBag.tacgia = db.TacGias.ToList().Count;
             ViewBag.tintuc = "Tất cả tin tức";
             ViewBag.sobaiviet = tinTucs.ToList().Count();
             ViewData["stt"] = 1;
-            return View(tinTucs.ToList());
+            int pageNumber = (page ?? 1);
+            int pageSize = 3;
+
+            var tinTucs1 = db.TinTucs.ToList();
+
+            //Bai viet
+            var baiviet = tinTucs1.OrderBy(x => x.Ngay_Dang).ToList();
+            var ngayDang = tinTucs1.Select(x => x.Ngay_Dang).Distinct().ToList();
+            List < String > lingaydang= new List<String>();
+            for(int i = 0; i < ngayDang.Count; i++)
+            {
+                lingaydang.Add(ngayDang[i].Day + "/" + ngayDang[i].Month +"/"+ngayDang[i].Year);
+
+            }
+            List<int> liDate = new List<int>(5);
+
+            foreach (var item in ngayDang)
+            {
+                liDate.Add(tinTucs1.Count(x => x.Ngay_Dang == item));
+            }
+            var rep = liDate;
+            ViewBag.ngaydang = lingaydang;
+            ViewBag.sobai = liDate.ToList();
+ 
+            return View(tinTucs.OrderBy(x=>x.Id_TinTuc).ToPagedList(pageNumber,pageSize));
         }
 
         // GET: Admin/TinTucs/Details/5
         public ActionResult Details(int? id)
         {
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -77,24 +69,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TinTucs/Create
         public ActionResult Create()
         {
-             if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             ViewBag.Id_LoaiTinTuc = new SelectList(db.LoaiTinTucs, "Id_LoaiTinTuc", "Ten_LoaiTinTuc");
             ViewBag.Id_Tac_Gia = new SelectList(db.TacGias, "Id_Tac_Gia", "Ten_Tac_Gia");
             return View();
@@ -113,7 +88,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 if (ModelState.IsValid)
                 {
 
-                    var f = Request.Files["ImageFile"];
+                    var f = Request.Files["img"];
                     if (f != null && f.ContentLength > 0)
                     {
                         string FileName = System.IO.Path.GetFileName(f.FileName);
@@ -122,8 +97,25 @@ namespace BAITAPLON.Areas.Admin.Controllers
                         f.SaveAs(UploadPath);
                         tinTuc.img = FileName;
                     }
+                   
                     tinTuc.Ngay_Dang = DateTime.Now;
                     tinTuc.Trang_Thai = "Chưa duyệt";
+                    var tenTacGia = "";
+                    int idTG=0;
+                    if (TempData.ContainsKey("TenTacGia"))
+                    {
+                         tenTacGia = TempData["TenTacGia"].ToString();
+                    }
+                    foreach (var item in db.TacGias)
+                    {
+                        if (item.Ten_Tac_Gia == tenTacGia)
+                        {
+                            idTG = item.Id_Tac_Gia;
+                            break;
+                        }
+                       
+                    }
+                    tinTuc.Id_Tac_Gia = idTG;
                     db.TinTucs.Add(tinTuc);
                     db.SaveChanges();
                     return RedirectToAction("Index");
@@ -144,24 +136,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TinTucs/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -186,7 +161,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var f = Request.Files["ImageFile"];
+                var f = Request.Files["img"];
                 if (f != null && f.ContentLength > 0)
                 {
                     string FileName = System.IO.Path.GetFileName(f.FileName);
@@ -209,24 +184,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TinTucs/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -258,7 +216,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
             }
             base.Dispose(disposing);
         }
-        public ActionResult Thoisu()
+        public ActionResult Thoisu(int? page)
         {
             List<TinTuc> li = new List<TinTuc>();
            
@@ -271,29 +229,15 @@ namespace BAITAPLON.Areas.Admin.Controllers
                     li.Add(item);
                 }
             }
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             ViewBag.tintuc = "Tin tức thời sự";
             ViewBag.sobaiviet = li.Count();
-            return View(li) ;
+
+            int pageNumber = (page ?? 1);
+            int pageSize = 3;
+            return View(li.OrderBy(x => x.Id_TinTuc).ToPagedList(pageNumber, pageSize)) ;
         }
-        public ActionResult Giaoduc()
+        public ActionResult Giaoduc(int? page)
         {
             List<TinTuc> li = new List<TinTuc>();
             var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
@@ -304,29 +248,15 @@ namespace BAITAPLON.Areas.Admin.Controllers
                     li.Add(item);
                 }
             }
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             ViewBag.tintuc = "Tin tức giáo dục";
             ViewBag.sobaiviet = li.Count();
-            return View("Thoisu", li);
+
+            int pageNumber = (page ?? 1);
+            int pageSize = 3;
+            return View("Thoisu", li.OrderBy(x => x.Id_TinTuc).ToPagedList(pageNumber, pageSize));
         }
-        public ActionResult Doisong()
+        public ActionResult Doisong(int? page)
         {
             List<TinTuc> li = new List<TinTuc>();
             var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
@@ -337,27 +267,28 @@ namespace BAITAPLON.Areas.Admin.Controllers
                     li.Add(item);
                 }
             }
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             ViewBag.tintuc = "Tin tức đời sống";
             ViewBag.sobaiviet = li.Count();
+
+            int pageNumber = (page ?? 1);
+            int pageSize = 3;
+            return View("Thoisu", li.OrderBy(x => x.Id_TinTuc).ToPagedList(pageNumber, pageSize));
+        }
+        public ActionResult Search()
+        {
+            List<TinTuc> li = new List<TinTuc>();
+            var key = Request.Form["search"].ToString();
+            var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
+            foreach (var item in tinTucs.ToList())
+            {
+                if (item.Tieu_De.Contains(key))
+                {
+                    li.Add(item);
+                }
+            }
             return View("Thoisu", li);
         }
+       
     }
 }

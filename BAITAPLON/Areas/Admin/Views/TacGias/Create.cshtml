@@ -14,12 +14,12 @@
 <div class="form-horizontal">
     <h4 class="tintuc-h4">Tác giả</h4>
     <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.ValidationSummary(true, "", new { @class = "text-danger1" })
     <div class="form-group">
         @Html.LabelFor(model => model.Ten_Tac_Gia, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Ten_Tac_Gia, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Ten_Tac_Gia, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.Ten_Tac_Gia, "", new { @class = "text-danger1" })
         </div>
     </div>
 
@@ -27,25 +27,30 @@
         @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger1" })
         </div>
     </div>
 
+  
     <div class="form-group">
         @Html.LabelFor(model => model.Chucvu, htmlAttributes: new { @class = "control-label col-md-2" })
+
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Chucvu, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Chucvu, "", new { @class = "text-danger" })
+            <select class="form-control" id="Chucvu" name="Chucvu">
+                <option>Quản lý</option>
+                <option>Tác giả</option>
+            </select>
+            @Html.ValidationMessageFor(model => model.Chucvu, "", new { @class = "text-danger1" })
         </div>
     </div>
-
     <div class="form-group">
         <label class="control-label col-md-2">Hình ảnh đại diện</label>
         <div class="col-md-10">
             <img onclick="selectImg()" id="output" class="img-rounded" alt="Ảnh bìa" width="180"
                  src="~/Areas/Admin/Data/img-design/noimage.png" />
             <p><label for="ufile" style="cursor:pointer;">Chọn file ảnh</label></p>
-            <input name="ImageFile" id="ufile" type="file" style="display:none;" onchange="loadFile(event)">
+            <input name="Avatar" id="ufile" type="file" style="display:none;" onchange="loadFile(event)">
+            @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger1" })
         </div>
     </div>
 
@@ -53,7 +58,7 @@
         @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger1" })
         </div>
     </div>
 
@@ -61,21 +66,23 @@
         @Html.LabelFor(model => model.Passwork, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Passwork, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Passwork, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.Passwork, "", new { @class = "text-danger1" })
         </div>
     </div>
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
-        </div>
-    </div>
+    <table style="margin-left:40%">
+        <tr>
+            <td> <input type="submit" value="Thêm mới" class="tintuc-create-1" /></td>
+
+        </tr>
+    </table>
 </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+<p>
+    <h4> <a href="@Url.Action("Index","TacGias")"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-back-left-arrows-dreamstale-lineal-dreamstale.png" height="14px" width="15px" /> Quay lại</a></h4>
+
+</p>
 <script>
     var loadFile = function (event) {
         var image = document.getElementById('output');

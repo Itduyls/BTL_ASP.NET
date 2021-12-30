@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BAITAPLON.Areas;
-
+using PagedList;
 namespace BAITAPLON.Areas.Admin.Controllers
 {
     public class NguoiDungsController : Controller
@@ -15,51 +15,19 @@ namespace BAITAPLON.Areas.Admin.Controllers
         private Model1 db = new Model1();
 
         // GET: Admin/NguoiDungs
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             ViewBag.nguoidung = "Người dùng";
-            return View(db.NguoiDungs.ToList());
+            int pageNumber = (page ?? 1);
+            int pageSize = 5;
+            return View(db.NguoiDungs.OrderBy(x => x.Id_NguoiDung).ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Admin/NguoiDungs/Details/5
         public ActionResult Details(int? id)
         {
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+          
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -75,24 +43,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/NguoiDungs/Create
         public ActionResult Create()
         {
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             return View();
         }
 
@@ -105,7 +56,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var f = Request.Files["ImageFile"];
+                var f = Request.Files["Avatar"];
                 if (f != null && f.ContentLength > 0)
                 {
                     string FileName = System.IO.Path.GetFileName(f.FileName);
@@ -115,6 +66,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
                     nguoiDung.Avatar = FileName;
 
                 }
+               
                 db.NguoiDungs.Add(nguoiDung);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -126,24 +78,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/NguoiDungs/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -165,7 +100,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var f = Request.Files["ImageFile"];
+                var f = Request.Files["Avatar"];
                 if (f != null && f.ContentLength > 0)
                 {
                     string FileName = System.IO.Path.GetFileName(f.FileName);
@@ -185,24 +120,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/NguoiDungs/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (TempData.ContainsKey("username"))
-            {
-                ViewBag.user = TempData["username"].ToString();
-
-            }
-            TempData.Keep("username");
-            if (TempData.ContainsKey("chucvu"))
-            {
-                ViewBag.chucvu = TempData["chucvu"].ToString();
-
-            }
-            TempData.Keep("chucvu");
-            if (TempData.ContainsKey("avatar"))
-            {
-                ViewBag.avatar = TempData["avatar"].ToString();
-
-            }
-            TempData.Keep("avatar");
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

@@ -247,3 +247,7 @@ E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAI
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\obj\Debug\BAITAPLON.pdb
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\CKFinder.dll
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\CKFinder.pdb
+E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\PagedList.dll
+E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\PagedList.Mvc.dll
+E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\PagedList.xml
+E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\PagedList.Mvc.xml

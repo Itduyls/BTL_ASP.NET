@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="~/Areas/Admin/assets\img\logo-fav.png">
+    <link rel="shortcut icon" href="~/Areas/Admin/assets/img/cong-ty-mona-media.jpg">
     <title>Tin Việt</title>
 
     <link rel="stylesheet" type="text/css" href="~/Areas/Admin/assets\lib\perfect-scrollbar\css\perfect-scrollbar.css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="~/Areas/Admin/assets\lib\jqvmap\jqvmap.min.css">
     <link rel="stylesheet" type="text/css" href="~/Areas/Admin/assets\lib\datetimepicker\css\bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="~/Areas/Admin/assets\css\app.css" type="text/css">
-    @*CKeditor*@
+
     <script src="~/Areas/Admin/assets/plugin/ckfinder/ckfinder.js"></script>
     <script src="~/Areas/Admin/assets/plugin/ckeditor/ckeditor.js"></script>
 </head>
@@ -31,14 +31,14 @@
                 <div class="be-right-navbar">
                     <ul class="nav navbar-nav float-right be-user-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="~/Areas/Admin/assets\img\@ViewBag.avatar" alt="Avatar"></a>
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="~/Areas/Admin/assets\img\@Session["Avatar"].ToString()" alt="Avatar"></a>
                             <div class="dropdown-menu" role="menu">
                                 <div class="user-info">
-                                    <div class="user-name">@ViewBag.user</div>
+                                    <div class="user-name">@Session["FullName"].ToString()</div>
                                     <div class="user-position online">Available</div>
-                                </div><a class="dropdown-item" href="pages-profile.html"><span class="icon mdi mdi-face"></span>Account</a>
+                                </div><a class="dropdown-item" href="@Url.Action("Index","TacGias") "><span class="icon mdi mdi-face"></span>Account</a>
                                 <a class="dropdown-item" href="#"><span class="icon mdi mdi-settings"></span>Settings</a>
-                                <a class="dropdown-item" href="@Url.Action("Login","TacGias")"> <span class="icon mdi mdi-power"></span>Logout</a>
+                                <a class="dropdown-item" href="@Url.Action("Logout","Home")"> <span class="icon mdi mdi-power"></span>Logout</a>
                             </div>
                         </li>
                     </ul>

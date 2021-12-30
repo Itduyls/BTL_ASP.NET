@@ -1,14 +1,26 @@
-﻿@model IEnumerable<BAITAPLON.Areas.TinTuc>
+﻿@model PagedList.IPagedList<BAITAPLON.Areas.TinTuc>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" />
 @{
     ViewBag.Title = "Thoisu";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
+<h4 style="margin-left:10px">Home/ @ViewBag.tintuc</h4>
+<div class="body-content-2">
 
-<div>
-    <h4 style="margin-left:10px">Home/ @ViewBag.tintuc</h4>
-    <div class="body-content-2">
-        <p class="viewbag-tintuc" style="height:60px;background-color:cornflowerblue; line-height:60px; font-size:24px; padding-left:10px">@ViewBag.tintuc</p>
+    <div>
+
+        <div style="display: flex; position: relative; background-color: cornflowerblue">
+            <p class="viewbag-tintuc" id="m-header-news">@ViewBag.tintuc</p>
+            <form action="@Url.Action("Search","TinTucs") " method="post">
+                <input name="search" type="text" class="m-field-input" placeholder="Tìm kiếm theo tiêu đề bài viết">
+            </form>
+        </div>
+    </div>
+
+    <div>
+
         <form class="themtin" action="Create">
             <input class="tintuc-create" type="submit" value="Thêm bài viết" name="create" />
         </form>
@@ -20,26 +32,26 @@
                     STT
                 </th>
                 <th width="8%">
-                    @Html.DisplayNameFor(model => model.LoaiTinTuc.Ten_LoaiTinTuc)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().LoaiTinTuc.Ten_LoaiTinTuc)
                 </th>
                 <th width="13%">
-                    @Html.DisplayNameFor(model => model.TacGia.Ten_Tac_Gia)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().TacGia.Ten_Tac_Gia)
                 </th>
                 <th width="10%">
-                    @Html.DisplayNameFor(model => model.Ngay_Dang)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Ngay_Dang)
                 </th>
                 <th width="27%">
-                    @Html.DisplayNameFor(model => model.Tieu_De)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Tieu_De)
                 </th>
 
                 <th width="10%">
-                    @Html.DisplayNameFor(model => model.img)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().img)
                 </th>
                 <th width="10%">
-                    @Html.DisplayNameFor(model => model.Ngay_Cap_Nhat)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Ngay_Cap_Nhat)
                 </th>
                 <th width="10%">
-                    @Html.DisplayNameFor(model => model.Trang_Thai)
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Trang_Thai)
                 </th>
                 <th width="10%">Tùy Chọn</th>
             </tr>
@@ -78,7 +90,7 @@
                         <form class="details" action="Details/@item.Id_TinTuc">
                             <input class="details-input" type="submit" value="Chi tiết" name="details" />
                         </form>
-                        @if ((ViewBag.user == item.TacGia.Ten_Tac_Gia && item.Trang_Thai == "Chưa duyệt") || ViewBag.chucvu == "Quản lý")
+                        @if ((Session["FullName"].ToString() == item.TacGia.Ten_Tac_Gia && item.Trang_Thai == "Chưa duyệt") || Session["ChucVu"].ToString() == "Quản lý")
                         {
                             <form class="details" action="Edit/@item.Id_TinTuc">
                                 <input class="edit-input" type="submit" value="Chỉnh sửa" name="edit" />
@@ -94,5 +106,9 @@
         </table>
 
     </div>
+
+</div>
+<div style="text-align:center">
+    @Html.PagedListPager(Model, page => Url.Action("thoisu", "tintucs", new { page }))
 </div>
 

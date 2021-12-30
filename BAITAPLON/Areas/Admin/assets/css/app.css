@@ -9237,6 +9237,7 @@ a.badge-grey.focus, a.badge-grey:focus {
         height: 45px;
         font-size: 18px;
         align-content: center;
+        margin-top: 10px
     }
 
         .tintuc-create:hover {
@@ -9288,7 +9289,8 @@ a.badge-grey.focus, a.badge-grey:focus {
         }
 
     .all-news {
-        margin-top: 30px
+        margin-top: 30px;
+        padding-left:10px;
     }
 
     .body-content-2 {
@@ -9297,6 +9299,8 @@ a.badge-grey.focus, a.badge-grey:focus {
         margin-left: 5px;
         margin-right: 5px;
         padding: 0px;
+      
+     
     }
 
     .tintuc-h4 {
@@ -9325,6 +9329,7 @@ a.badge-grey.focus, a.badge-grey:focus {
         margin-left: 30%;
         width: 150px;
         margin-right: 10px;
+        
     }
 
         .tintuc-create-1:hover {
@@ -9439,4 +9444,39 @@ a.badge-grey.focus, a.badge-grey:focus {
 }
 .user-icon{
     font-size:56px;
+}
+.m-text-error-login{
+    color:white;
+    font-size:16px;
+    text-align:center;
+}
+.m-field-input {
+    border: 1px solid #DBDEFF;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 12px;
+    color: black;
+    background-image: url('../img/search.png');
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    background-size: 16px 16px;
+    width: 220px;
+    padding-left: 40px;
+    margin-right: 10px;
+    box-sizing: border-box;
+   position:absolute;
+   right:0;
+   top:20%;
+}
+#m-header-news {
+    width: 100%;
+    height: 60px;
+    margin-bottom:10px;
+    line-height:70px;
+    font-size: 24px;
+    padding-left: 10px
+}
+.text-danger1{
+    color:red;
+    font-size:14px;
 }

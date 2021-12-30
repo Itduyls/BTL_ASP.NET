@@ -17,7 +17,7 @@ namespace BAITAPLON.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new {Controller="TacGias", action = "Login", id = UrlParameter.Optional }
+                new {Controller="Home", action = "Login", id = UrlParameter.Optional }
             );
         }
     }

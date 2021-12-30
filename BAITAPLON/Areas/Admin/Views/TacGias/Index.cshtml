@@ -8,7 +8,7 @@
     <h4 style="margin-left:10px">Home/ @ViewBag.tacgia</h4>
     <div style="border:3px solid blue; border-radius:4px;margin-left:5px; margin-right:5px; padding:0px">
         <p class="viewbag-tintuc" style="height:60px;background-color:cornflowerblue; line-height:60px; font-size:24px; padding-left:10px">@ViewBag.tacgia</p>
-        @if (ViewBag.chucvu == "Quản lý")
+        @if (Session["ChucVu"].ToString() == "Quản lý")
         {
             <form class="themtin" action="create">
                 <input class="tintuc-create" type="submit" value="Thêm tác giả" name="create" />
@@ -41,7 +41,7 @@
                         <th>
                             @Html.DisplayNameFor(model => model.Avatar)
                         </th>
-                        @if (ViewBag.chucvu == "Quản lý")
+                        @if (Session["ChucVu"].ToString() == "Quản lý")
                         {
                             <th>
                                 @Html.DisplayNameFor(model => model.Username)
@@ -71,7 +71,7 @@
                             <img src="~/Areas/Admin/assets/img/@item.Avatar" alt="avt" width="100px" height="100px" />
 
                         </td>
-                        @if (ViewBag.chucvu == "Quản lý")
+                        @if (Session["ChucVu"].ToString() == "Quản lý")
                         {
                             <td>
                                 @Html.DisplayFor(modelItem => item.Username)
@@ -84,13 +84,13 @@
                         <form class="details" action="Details/@item.Id_Tac_Gia">
                             <input class="details-input" type="submit" value="Chi tiết" name="details" />
                         </form>
-                        @if (ViewBag.user == item.Ten_Tac_Gia || ViewBag.chucvu == "Quản lý")
+                        @if (Session["FullName"].ToString() == item.Ten_Tac_Gia || Session["ChucVu"].ToString() == "Quản lý")
                         {
                             <form class="details" action="Edit/@item.Id_Tac_Gia">
                                 <input class="edit-input" type="submit" value="Chỉnh sửa" name="edit" />
                             </form>
                         }
-                        @if (ViewBag.chucvu == "Quản lý"&& ViewBag.user != item.Ten_Tac_Gia)
+                        @if (Session["ChucVu"].ToString() == "Quản lý"&& Session["FullName"].ToString() != item.Ten_Tac_Gia)
                         {
                             <form onsubmit="return deleteNew()" class="delete" action="Delete?id=@item.Id_Tac_Gia" method="post">
                                 @Html.AntiForgeryToken()

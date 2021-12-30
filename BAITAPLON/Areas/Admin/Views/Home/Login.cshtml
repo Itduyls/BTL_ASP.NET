@@ -7,10 +7,11 @@
 
 <html>
 <head>
+    <link rel="shortcut icon" href="~/Areas/Admin/assets/img/cong-ty-mona-media.jpg">
     <meta name="viewport" content="width=device-width" />
     <title>Login</title>
     <link rel="stylesheet" href="~/Areas/Admin/assets/css/app.css" />
-    
+
 </head>
 <body class="m-body-login">
 
@@ -18,36 +19,41 @@
 
         <img class="m-img-login" src="~/Areas/Admin/assets/img/logo.png" />
         <h4 class="tintuc-h4-login">Tin cậy - Chính xác - Nhanh chóng</h4>
-        <br />
-       
-      
-        @using (Html.BeginForm("CheckLogin", "TacGias", FormMethod.Post))
+        @if (TempData.ContainsKey("error"))
         {
+        <p class="m-text-error-login">@TempData["error"].ToString() </p>
+        }
+
+
+        @using (Html.BeginForm("CheckLogin", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
             <table class="m-table-login">
                 <tr>
                     <td class="m-table-login-td" width="30%"> @Html.Label("username", "Tên đăng nhập:", new { @class = "m-user-lable-login" })</td>
                     <td>
-                        <input type="text" name="username" class="m-user-login"placeholder="Username" />
+                        <input type="text" name="username" class="m-user-login" placeholder="Username" />
                     </td>
                 </tr>
                 <tr>
                     <td class="m-table-login-td">@Html.Label("passwork", "Mật khẩu:", new { @class = "m-user-lable-login" })</td>
-                    <td><input type="password" name="passwork" class="m-user-login" placeholder="Passwork" /></td>
+                    <td><input type="password" name="passwork" class="m-user-login" placeholder="Password" /></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input class="m-submit-login" type="submit" value="Đăng nhập" name="submit"  /></td>
+                    <td colspan="2"><input class="m-submit-login" type="submit" value="Đăng nhập" name="submit" /></td>
 
                 </tr>
-               
-                
-                
+
+
+
             </table>
-            <br />
-           
-                    <a class="m-forgot-pass" href="#">Quên mật khẩu</a>
+
+
+
+            <a class="m-forgot-pass" href="#">Quên mật khẩu</a>
+
 
         }
     </div>
-     
 </body>
 </html>

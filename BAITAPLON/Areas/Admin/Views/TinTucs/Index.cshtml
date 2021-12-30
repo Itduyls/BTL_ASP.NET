@@ -1,113 +1,127 @@
-﻿@model IEnumerable<BAITAPLON.Areas.TinTuc>
+﻿@model PagedList.IPagedList<BAITAPLON.Areas.TinTuc>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" />
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Home/Index.cshtml";
 }
-<div>
-   
-    <div class="body-content-2">
-        <p class="viewbag-tintuc" style="height:60px;background-color:cornflowerblue; line-height:60px; font-size:24px; padding-left:10px">@ViewBag.tintuc</p>
-        <form class="themtin" action="Create">
-            <input class="tintuc-create" type="submit" value="Thêm bài viết" name="create" />
+
+<div class="body-content-2">
+
+    <div   style="display: flex; position: relative; background-color: cornflowerblue;">
+        <p class="viewbag-tintuc" id="m-header-news">@ViewBag.tintuc</p>
+        <form action="@Url.Action("Search","TinTucs")" method="post">
+            <input name="search" type="text" class="m-field-input" placeholder="Tìm kiếm theo tiêu đề bài viết">
         </form>
+    </div>
 
-        <h4 class="all-news">Tổng số bài viết: @ViewBag.sobaiviet</h4>
-        <table class="table">
+<div style="padding-left:10px;">
+    <form class="themtin" action="Create">
+        <input class="tintuc-create" type="submit" value="Thêm bài viết" name="create" />
+    </form>
+    <h4 class="all-news">Tổng số bài viết: @ViewBag.sobaiviet</h4>
+</div>
+<div style="padding-left:10px">
+    <table class="table">
+        <tr>
+            <th width="2%">
+                STT
+            </th>
+            <th width="8%">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().LoaiTinTuc.Ten_LoaiTinTuc)
+            </th>
+            <th width="13%">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().TacGia.Ten_Tac_Gia)
+            </th>
+            <th width="10%">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Ngay_Dang)
+            </th>
+            <th width="27%">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Tieu_De)
+            </th>
+
+            <th width="10%">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().img)
+            </th>
+            <th width="10%">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Ngay_Cap_Nhat)
+            </th>
+            <th width="10%">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Trang_Thai)
+            </th>
+            <th width="10%">Tùy Chọn</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
             <tr>
-                <th width="2%">
-                    STT
-                </th>
-                <th width="8%">
-                    @Html.DisplayNameFor(model => model.LoaiTinTuc.Ten_LoaiTinTuc)
-                </th>
-                <th width="13%">
-                    @Html.DisplayNameFor(model => model.TacGia.Ten_Tac_Gia)
-                </th>
-                <th width="10%">
-                    @Html.DisplayNameFor(model => model.Ngay_Dang)
-                </th>
-                <th width="27%">
-                    @Html.DisplayNameFor(model => model.Tieu_De)
-                </th>
+                <td>@(Model.ToList().IndexOf(item)+1)</td>
 
-                <th width="10%">
-                    @Html.DisplayNameFor(model => model.img)
-                </th>
-                <th width="10%">
-                    @Html.DisplayNameFor(model => model.Ngay_Cap_Nhat)
-                </th>
-                <th width="10%">
-                    @Html.DisplayNameFor(model => model.Trang_Thai)
-                </th>
-                <th width="10%">Tùy Chọn</th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoaiTinTuc.Ten_LoaiTinTuc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TacGia.Ten_Tac_Gia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngay_Dang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tieu_De)
+                </td>
+
+                <td>
+
+                    <img src="~/Areas/Admin/Data/img/@item.img" alt="logo" width="100px" height="100px" />
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngay_Cap_Nhat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trang_Thai)
+                </td>
+                <td>
+
+                    <form class="details" action="Details/@item.Id_TinTuc">
+                        <input class="details-input" type="submit" value="Chi tiết" name="details" />
+                    </form>
+                    @if ((Session["FullName"].ToString() == item.TacGia.Ten_Tac_Gia && item.Trang_Thai == "Chưa duyệt") || Session["ChucVu"].ToString() == "Quản lý")
+                    {
+                        <form class="details" action="Edit/@item.Id_TinTuc">
+                            <input class="edit-input" type="submit" value="Chỉnh sửa" name="edit" />
+                        </form>
+
+                        <form onsubmit="return deleteNew()" class="delete" action="Delete?id=@item.Id_TinTuc" method="post">
+                            @Html.AntiForgeryToken()
+
+                            <input type="submit" class="delete-input" value="Xóa" />
+
+                        </form>
+
+                    }
+                </td>
             </tr>
 
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@(Model.ToList().IndexOf(item)+1)</td>
+        }
 
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LoaiTinTuc.Ten_LoaiTinTuc)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.TacGia.Ten_Tac_Gia)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Ngay_Dang)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Tieu_De)
-                    </td>
+    </table>
 
-                    <td>
-
-                        <img src="~/Areas/Admin/Data/img/@item.img" alt="logo" width="100px" height="100px" />
-
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Ngay_Cap_Nhat)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Trang_Thai)
-                    </td>
-                    <td>
-
-                        <form class="details" action="Details/@item.Id_TinTuc">
-                            <input class="details-input" type="submit" value="Chi tiết" name="details" />
-                        </form>
-                        @if ((ViewBag.user == item.TacGia.Ten_Tac_Gia && item.Trang_Thai == "Chưa duyệt") || ViewBag.chucvu == "Quản lý")
-                        {
-                            <form class="details" action="Edit/@item.Id_TinTuc">
-                                <input class="edit-input" type="submit" value="Chỉnh sửa" name="edit" />
-                            </form>
-
-                            <form onsubmit="return deleteNew()" class="delete" action="Delete?id=@item.Id_TinTuc" method="post">
-                                @Html.AntiForgeryToken()
-
-                                <input type="submit" class="delete-input"  value="Xóa" />
-
-                            </form>
-                            
-                        }
-                    </td>
-                </tr>
-
-            }
-
-        </table>
-       
-    </div>
+</div>
+</div>
+<div style="text-align:center">
+    @Html.PagedListPager(Model, page => Url.Action("index", "tintucs", new { page }))
 </div>
 <script>
     function deleteNew() {
-       
+
         if (confirm("Bạn chắc chắn muốn xóa ") == true) {
             return true;
         }
         return false;
-        
+
 
     }
+
 </script>
