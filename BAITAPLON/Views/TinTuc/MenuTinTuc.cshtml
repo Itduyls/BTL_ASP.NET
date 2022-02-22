@@ -1,0 +1,55 @@
+﻿@model PagedList.IPagedList<BAITAPLON.Areas.TinTuc>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "MenuProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "MenuTinTuc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="banner">
+
+    <img src="~/Content/img/banner_tintuc.png">
+
+
+</div>
+
+
+<div class="gach">
+
+    <hr><div>
+        Tin Tức
+        <div><hr></div>
+    </div>
+</div>
+<div class="news">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-5">
+            <div class="card" id="card">
+                <a class="m-link-news" href=@Url.Action("XemChiTiet","HomeUser" ,new {id = item.Id_TinTuc, tg= item.Id_Tac_Gia})>
+                    <img width="100%" height="180px class="card-img-top" src="~/Areas/Admin/assets/img/content/@item.img" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">@item.Tieu_De</p>
+                    </div>
+                </a>
+
+               
+            </div>
+
+        </div>
+    }
+</div>
+<div class="news">
+    <div>
+        <div>
+            <div><p style="margin-right:100px">@Html.PagedListPager(Model, page => Url.Action("MenuTinTuc", new { page, Id_LoaiTinTuc = ViewBag.ma }), new PagedListRenderOptions())</p></div>
+        </div>
+    </div>
+</div>
+
+
+

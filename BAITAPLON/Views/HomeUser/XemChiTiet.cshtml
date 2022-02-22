@@ -1,0 +1,32 @@
+﻿@model BAITAPLON.Areas.TinTuc
+@{ 
+    BAITAPLON.Areas.TacGia tg = ViewBag.sp;
+}
+<link rel="stylesheet" type="text/css" href="~/Content/xemchitiet.css">
+<div class="banner">
+
+    <img src="~/Content/img/banner-ngang-01.jpg" style="height:200px; padding-top:90px">
+
+</div>
+
+<div class="content_main">
+    <div class="left_main" >
+        <img src="~/Content/img/dich-vu-thiet-ke-anh-quang-cao-facebook-1.png" alt="" />
+    </div>
+    <div class="mid_main" >
+        <h1 style="align-content:center;"> <b>@Model.Tieu_De;</b></h1>
+        <p>Tác giả : @tg.Ten_Tac_Gia</p>
+        <p>@Model.Ngay_Dang</p>
+        <img src="~/Areas/Admin/assets/img/content/@Model.img" alt=" " style="text-align:left " />
+
+        <p>@Html.Raw(Model.Noi_Dung)</p>
+
+      
+
+
+    </div>
+    <div class="right_main">
+        <img src="~/Content/img/dich-vu-thiet-ke-anh-quang-cao-facebook-1.png" alt="" />
+    </div>
+</div>
+

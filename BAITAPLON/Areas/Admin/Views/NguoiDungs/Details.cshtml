@@ -1,9 +1,7 @@
 ﻿@model BAITAPLON.Areas.NguoiDung
 
-@{
-    ViewBag.Title = "Details";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
-}
+@{ ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml"; }
 
 <h2 class="tintuc-h2-ct">Chi tiết</h2>
 
@@ -16,26 +14,28 @@
         <th> @Html.DisplayNameFor(model => model.Email)</th>
 
         <th> @Html.DisplayNameFor(model => model.Avatar)</th>
-        <th>@Html.DisplayNameFor(model => model.Username)</th>
-        <th>@Html.DisplayNameFor(model => model.Passwork)</th>
-        </thead>
+        @if (Session["ChucVu"].ToString() == "Quản lý")
+        {
+           <th>@Html.DisplayNameFor(model => model.Username)</th>
+           <th>@Html.DisplayNameFor(model => model.Passwork)</th>
+           }</thead>
         <tr>
             <td> @Html.DisplayFor(model => model.Ten_NguoiDung)</td>
             <td> @Html.DisplayFor(model => model.Email)</td>
-
-
-
 
             <td>
 
                 <img src="~/Areas/Admin/assets/img/@Model.Avatar" alt="logo" width="100px" height="100px" />
             </td>
-            <td> @Html.DisplayFor(model => model.Username)</td>
-           
-            <td>  @Html.DisplayFor(model => model.Passwork)</td>
+            @if (Session["ChucVu"].ToString() == "Quản lý")
+            {
+                 <td> @Html.DisplayFor(model => model.Username)</td>
+
+                <td>  @Html.DisplayFor(model => model.Passwork)</td>
+}
         </tr>
     </table>
-   
+
 </div>
 <p>
     <h4> <a href="@Url.Action("Index","Nguoidungs")"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-back-left-arrows-dreamstale-lineal-dreamstale.png" height="14px" width="15px" /> Quay lại</a></h4>

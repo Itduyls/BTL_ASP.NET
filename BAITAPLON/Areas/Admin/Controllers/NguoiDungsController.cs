@@ -17,11 +17,18 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/NguoiDungs
         public ActionResult Index(int? page)
         {
-           
+            try { 
             ViewBag.nguoidung = "Người dùng";
             int pageNumber = (page ?? 1);
             int pageSize = 5;
             return View(db.NguoiDungs.OrderBy(x => x.Id_NguoiDung).ToPagedList(pageNumber, pageSize));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // GET: Admin/NguoiDungs/Details/5
@@ -54,6 +61,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id_NguoiDung,Ten_NguoiDung,Email,Avatar,Username,Passwork")] NguoiDung nguoiDung)
         {
+            try { 
             if (ModelState.IsValid)
             {
                 var f = Request.Files["Avatar"];
@@ -73,6 +81,13 @@ namespace BAITAPLON.Areas.Admin.Controllers
             }
 
             return View(nguoiDung);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // GET: Admin/NguoiDungs/Edit/5
@@ -98,6 +113,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id_NguoiDung,Ten_NguoiDung,Email,Avatar,Username,Passwork")] NguoiDung nguoiDung)
         {
+            try { 
             if (ModelState.IsValid)
             {
                 var f = Request.Files["Avatar"];
@@ -115,6 +131,13 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             return View(nguoiDung);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // GET: Admin/NguoiDungs/Delete/5

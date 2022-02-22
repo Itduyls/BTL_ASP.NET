@@ -16,7 +16,8 @@ namespace BAITAPLON
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "HomeUser", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "HomeUser", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "BAITAPLON.controllers" }
             );
         }
     }

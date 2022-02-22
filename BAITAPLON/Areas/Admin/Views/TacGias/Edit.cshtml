@@ -39,7 +39,7 @@
         }
      
     }
-    @if (dem > 1 )
+    @if (dem > 1||(Session["ChucVu"].ToString()=="Quản lý" && Session["FullName"].ToString()!=Model.Ten_Tac_Gia.ToString() ))
     {
         <div class="form-group">
             @Html.LabelFor(model => model.Chucvu, htmlAttributes: new { @class = "control-label col-md-2" })

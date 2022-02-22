@@ -62,19 +62,23 @@ body{
 	font-weight: bold;
 	color: white;
 	text-transform: uppercase;
-	position: absolute;
-	text-align: right;
+	height:110px;
+	position:relative;
 
 }
 .nav .logo img{
 	max-width: 100%;
-	height: 75px;
+	height: 80px;
 	float: left;
 	padding-left: 200px;
+	padding-top:10px;
+
 }
 .sidebar {
+			position:absolute;
+			right:0;
+			bottom:0;
 		
-		padding-left: 500px;
 }
 .sidebar ul{
 	display: flex;
@@ -342,6 +346,10 @@ body{
 	.left ul {
 		padding-left: 80px;
 	}
+	.right{
+		position:absolute;
+		right:80px;
+	}
 	.right ul {
 		padding-left: 900px;
 	}
@@ -388,6 +396,7 @@ body{
 		padding-top: 0px;
 		padding-left: 0px;
 		max-width: 1320px;
+		height:50px;
 	}
 	.banner button {
 		display: none;
@@ -463,4 +472,19 @@ body{
 	.banner {
 		display: none;
 	}
+}
+.m-link-news:hover{
+	text-decoration:none;
+	color:black;
+	
+	
+	list-style-type:none;
+}
+.m-link-news {
+	text-decoration: none;
+	color: black;
+	list-style-type: none;
+}
+#card{
+	height:300px;
 }

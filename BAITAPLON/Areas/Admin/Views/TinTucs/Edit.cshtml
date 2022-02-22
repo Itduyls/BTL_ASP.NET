@@ -49,7 +49,7 @@
             <label class="control-label col-md-2">Hình ảnh đại diện</label>
             <div class="col-md-10">
                 <img onclick="selectImg()" id="output" class="img-rounded" alt="Ảnh bìa" width="180"
-                     src="~/Areas/Admin/Data/img/@Model.img" />
+                     src="~/Areas/Admin/assets/img/content/@Model.img" />
                 <p><label for="ufile" style="cursor:pointer;">Chọn file ảnh</label></p>
                 <input name="img" id="ufile" type="file" style="display:none;" onchange="loadFile(event)">
                 @Html.HiddenFor(model => model.img)
@@ -68,8 +68,13 @@
                         <option>Đã duyệt</option>
                     </select>
                 </div>
-            </div>
-        }
+            </div>         }
+      
+           @{
+               
+               TempData["tacgia1"] = Session["ChucVu"].ToString();};
+
+        @Html.HiddenFor(model => model.Ngay_Dang);
         <div class="form-group">
             <label class="control-label col-md-2">Tác giả</label>
             <div class="col-md-10">
@@ -77,18 +82,27 @@
                 @Html.ValidationMessageFor(model => model.Id_Tac_Gia, "", new { @class = "text-danger1" })
             </div>
         </div>
+
         <div class="form-group">
-
             @Html.LabelFor(model => model.Noi_Dung, htmlAttributes: new { @class = "control-label col-md-2" })
-
-
             <div class="col-md-10">
                 <textarea name="Noi_Dung" id="noiDung">@Model.Noi_Dung</textarea>
-
                 @Html.ValidationMessageFor(model => model.Noi_Dung, "", new { @class = "text-danger1" })
             </div>
-
         </div>
+
+         @*<div class="form-group">
+            <label class="control-label col-md-2">Hình ảnh đại diện</label>
+            <div class="col-md-10">
+                <img onclick="selectImg()" id="output" class="img-rounded" alt="Ảnh bìa" width="180"
+                     src="~/Areas/Admin/Data/img/@Model.img" />
+                <p><label for="ufile" style="cursor:pointer;">Chọn file ảnh</label></p>
+                <input name="img" id="ufile" type="file" style="display:none;" onchange="loadFile(event)">
+                @Html.HiddenFor(model => model.img)
+            </div>
+        </div>*@
+
+
         <div class="form-group">
             <div style="margin-left: 15%">
                 <input type="submit" value="Lưu" class="tintuc-create-1" />

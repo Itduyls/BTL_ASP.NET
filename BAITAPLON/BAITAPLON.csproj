@@ -150,6 +150,7 @@
     <Compile Include="Areas\Admin\Model\TacGia.cs" />
     <Compile Include="Areas\Admin\Model\TinTuc.cs" />
     <Compile Include="Controllers\HomeUserController.cs" />
+    <Compile Include="Controllers\TinTucController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1820,13 +1821,21 @@
     <Content Include="Areas\Admin\assets\img\avatar4.png" />
     <Content Include="Areas\Admin\assets\img\avatar5.png" />
     <Content Include="Areas\Admin\assets\img\avatar6.png" />
-    <Content Include="Areas\Admin\assets\img\bitbucket.png" />
     <Content Include="Areas\Admin\assets\img\cong-ty-mona-media.jpg" />
+    <Content Include="Areas\Admin\assets\img\content\chuquyenbiendao.jpg" />
+    <Content Include="Areas\Admin\assets\img\content\covid.jpeg" />
+    <Content Include="Areas\Admin\assets\img\content\gas.jpg" />
+    <Content Include="Areas\Admin\assets\img\content\hiepdinhthuongmai.jpg" />
+    <Content Include="Areas\Admin\assets\img\content\mit.jpg" />
+    <Content Include="Areas\Admin\assets\img\content\phamminhchinh.jpeg" />
+    <Content Include="Areas\Admin\assets\img\content\phaohoa.jpg" />
+    <Content Include="Areas\Admin\assets\img\content\phongchongtoipham.jpeg" />
+    <Content Include="Areas\Admin\assets\img\content\Quochoi.jpg" />
+    <Content Include="Areas\Admin\assets\img\content\thanhphohanoi.jpg" />
+    <Content Include="Areas\Admin\assets\img\content\xahoi.jpeg" />
     <Content Include="Areas\Admin\assets\img\docs\img1.png" />
     <Content Include="Areas\Admin\assets\img\docs\img2.png" />
     <Content Include="Areas\Admin\assets\img\docs\img3.png" />
-    <Content Include="Areas\Admin\assets\img\dribbble.png" />
-    <Content Include="Areas\Admin\assets\img\dropbox.png" />
     <Content Include="Areas\Admin\assets\img\gallery\img1.jpg" />
     <Content Include="Areas\Admin\assets\img\gallery\img10.jpg" />
     <Content Include="Areas\Admin\assets\img\gallery\img11.jpg" />
@@ -1839,17 +1848,10 @@
     <Content Include="Areas\Admin\assets\img\gallery\img7.jpg" />
     <Content Include="Areas\Admin\assets\img\gallery\img8.jpg" />
     <Content Include="Areas\Admin\assets\img\gallery\img9.jpg" />
-    <Content Include="Areas\Admin\assets\img\github.png" />
-    <Content Include="Areas\Admin\assets\img\logo-fav.png" />
-    <Content Include="Areas\Admin\assets\img\logo-symbol.png" />
-    <Content Include="Areas\Admin\assets\img\logo-white-xx.png" />
-    <Content Include="Areas\Admin\assets\img\logo-white.png" />
-    <Content Include="Areas\Admin\assets\img\logo-xx.png" />
+    <Content Include="Areas\Admin\assets\img\huudung.jpg" />
     <Content Include="Areas\Admin\assets\img\logo.png" />
-    <Content Include="Areas\Admin\assets\img\mail_chimp.png" />
     <Content Include="Areas\Admin\assets\img\search.png" />
-    <Content Include="Areas\Admin\assets\img\slack.png" />
-    <Content Include="Areas\Admin\assets\img\user-profile-display.png" />
+    <Content Include="Areas\Admin\assets\img\vanduy.jpg" />
     <Content Include="Areas\Admin\assets\js\app.js" />
     <Content Include="Areas\Admin\assets\lib\bootstrap-slider\bootstrap-slider.min.js" />
     <Content Include="Areas\Admin\assets\lib\bootstrap-slider\css\bootstrap-slider.min.css" />
@@ -2940,12 +2942,18 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\banner-ngang-01.jpg" />
+    <Content Include="Content\img\banner123.jpg" />
     <Content Include="Content\img\banner_tintuc.png" />
+    <Content Include="Content\img\dich-vu-thiet-ke-anh-quang-cao-facebook-1.png" />
+    <Content Include="Content\img\images.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\pngtree-hot-news-icon-cartoon-style-png-image_1861665.jpg" />
+    <Content Include="Content\img\pngtree-spring-banner-poster-board-image_151956.jpg" />
     <Content Include="Content\img\—Pngtree—leaf circle icon design template_5974714.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Trangchu.css" />
+    <Content Include="Content\xemchitiet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -3115,6 +3123,7 @@
     <Content Include="Areas\Admin\assets\plugin\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Areas\Admin\assets\plugin\ckfinder\userfiles\.htaccess" />
     <Content Include="Areas\Admin\Views\Home\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Error.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3138,10 +3147,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\HomeUser\Index.cshtml" />
+    <Content Include="Views\HomeUser\XemChiTiet.cshtml" />
+    <Content Include="Views\HomeUser\Menu.cshtml" />
+    <Content Include="Views\TinTuc\MenuTinTuc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

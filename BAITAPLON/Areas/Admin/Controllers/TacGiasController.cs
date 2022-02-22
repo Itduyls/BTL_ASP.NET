@@ -17,6 +17,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TacGias
         public ActionResult Index()
         {
+            try { 
             int dem = 0;
             foreach (var item in db.TacGias.ToList())
             {
@@ -28,11 +29,19 @@ namespace BAITAPLON.Areas.Admin.Controllers
             TempData["dem"] = dem;
             ViewBag.tacgia = "Tác giả";
             return View(db.TacGias.ToList());
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // GET: Admin/TacGias/Details/5
         public ActionResult Details(int? id)
         {
+
          
             if (id == null)
             {
@@ -60,6 +69,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id_Tac_Gia,Ten_Tac_Gia,Email,Chucvu,Avatar,Username,Passwork")] TacGia tacGia)
         {
+            try { 
             if (ModelState.IsValid)
             {
                 var f = Request.Files["Avatar"];
@@ -79,6 +89,13 @@ namespace BAITAPLON.Areas.Admin.Controllers
             }
 
             return View(tacGia);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // GET: Admin/TacGias/Edit/5
@@ -129,9 +146,9 @@ namespace BAITAPLON.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                ViewBag.Error = "Đã xảy ra lỗi! " + ex.Message;
-           
-                return View(tacGia);
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
             }
         }
 
@@ -177,22 +194,31 @@ namespace BAITAPLON.Areas.Admin.Controllers
         }
         public ActionResult CheckLogin()
         {
-            List<TacGia> li = new List<TacGia>();
-            li = db.TacGias.ToList();
-            string username = Request.Form["username"];
-            string passwork = Request.Form["passwork"];
-            foreach (var item in li)
+            try
             {
-                if (item.Username.ToString() == username && item.Passwork.ToString()==passwork)
+                List<TacGia> li = new List<TacGia>();
+                li = db.TacGias.ToList();
+                string username = Request.Form["username"];
+                string passwork = Request.Form["passwork"];
+                foreach (var item in li)
                 {
-                    TempData["username"] = item.Ten_Tac_Gia;
-                    TempData["chucvu"] = item.Chucvu;
-                    TempData["avatar"] = item.Avatar;
-                    return RedirectToAction("Index", "TinTucs");
+                    if (item.Username.ToString() == username && item.Passwork.ToString() == passwork)
+                    {
+                        TempData["username"] = item.Ten_Tac_Gia;
+                        TempData["chucvu"] = item.Chucvu;
+                        TempData["avatar"] = item.Avatar;
+                        return RedirectToAction("Index", "TinTucs");
+                    }
                 }
+                ViewBag.error = "Tài khoản hoặc mật khẩu không đúng";
+                return View("Login");
             }
-            ViewBag.error = "Tài khoản hoặc mật khẩu không đúng";
-            return View("Login");
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
     }
 }

@@ -16,24 +16,29 @@
         <th> @Html.DisplayNameFor(model => model.Email)</th>
         <th>@Html.DisplayNameFor(model => model.Chucvu)</th>
         <th> @Html.DisplayNameFor(model => model.Avatar)</th>
+        @if (Session["ChucVu"].ToString() == "Quản lý")
+        {
         <th>@Html.DisplayNameFor(model => model.Username)</th>
         <th>@Html.DisplayNameFor(model => model.Passwork)</th>
+        }
         </thead>
-        <tr>
-            <td> @Html.DisplayFor(model => model.Ten_Tac_Gia)</td>
-            <td> @Html.DisplayFor(model => model.Email)</td>
-            <td> @Html.DisplayFor(model => model.Chucvu)</td>
+    <tr>
+        <td> @Html.DisplayFor(model => model.Ten_Tac_Gia)</td>
+        <td> @Html.DisplayFor(model => model.Email)</td>
+        <td> @Html.DisplayFor(model => model.Chucvu)</td>
 
 
 
-            <td>
+        <td>
 
-                <img src="~/Areas/Admin/assets/img/@Model.Avatar" alt="logo" width="100px" height="100px" />
-            </td>
-
-            <td>@Html.DisplayFor(model => model.Username)</td>
-            <td>  @Html.DisplayFor(model => model.Passwork)</td>
-        </tr>
+            <img src="~/Areas/Admin/assets/img/@Model.Avatar" alt="logo" width="100px" height="100px" />
+        </td>
+        @if (Session["ChucVu"].ToString() == "Quản lý")
+        {
+                    <td>@Html.DisplayFor(model => model.Username)</td>
+                    <td>  @Html.DisplayFor(model => model.Passwork)</td>
+        }
+                                </tr>
     </table>
   
 </div>

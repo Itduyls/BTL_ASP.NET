@@ -1,23 +1,10 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
+﻿@model PagedList.IPagedList<BAITAPLON.Areas.TinTuc>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" />
 
 <div class="banner">
-
     <img src="~/Content/img/banner_tintuc.png">
-
-
-
-
-
 </div>
-
-
-
-
-
-
 
 
 <div class="gach">
@@ -28,42 +15,24 @@
     </div>
 </div>
 <div class="news">
-    <div class="col-lg-3 col-md-4 col-sm-5">
-        <div class="card" style="width: 18rem;">
-            <a href=""><img class="card-img-top" src="~/Content/img/pngtree-hot-news-icon-cartoon-style-png-image_1861665.jpg" alt="Card image cap"></a>
+    @foreach (var item in Model)
+    {
+<div class="col-lg-3 col-md-4 col-sm-5">
+    <div class="card" id="card">
+        <a class="m-link-news" href=@Url.Action("XemChiTiet","HomeUser" ,new {id = item.Id_TinTuc, tg= item.Id_Tac_Gia})>
+            <img width="100%" height="180px" class="card-img-top" src="~/Areas/Admin/assets/img/content/@item.img" alt="Card image cap">
             <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">@item.Tieu_De</p>
             </div>
-        </div>
+        </a>
 
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-5">
-        <div class="card" style="width: 18rem;">
-            <a href=""><img class="card-img-top" src="~/Content/img/pngtree-hot-news-icon-cartoon-style-png-image_1861665.jpg" alt="Card image cap"></a>
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-5">
-        <div class="card" style="width: 18rem;">
-            <a href=""><img class="card-img-top" src="~/Content/img/pngtree-hot-news-icon-cartoon-style-png-image_1861665.jpg" alt="Card image cap"></a>
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-5">
-        <div class="card" style="width: 18rem;">
-            <a href=""><img class="card-img-top" src="~/Content/img/pngtree-hot-news-icon-cartoon-style-png-image_1861665.jpg" alt="Card image cap"></a>
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
 
     </div>
 
+</div>}
+
+</div>
+<div style="text-align:center">
+    @Html.PagedListPager(Model, page => Url.Action("index", "homeuser", new { page }))
 </div>
 

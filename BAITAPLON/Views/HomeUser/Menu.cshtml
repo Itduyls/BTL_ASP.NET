@@ -1,0 +1,9 @@
+﻿@model List<BAITAPLON.Areas.LoaiTinTuc>
+
+@foreach (var item in Model)
+{
+
+
+<li><a href=@Url.Action("MenuTinTuc", "TinTuc", new { @Id_LoaiTinTuc = item.Id_LoaiTinTuc},null)> @item.Ten_LoaiTinTuc</a></li>
+
+}

@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-
-
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/Areas/Admin/assets/img/cong-ty-mona-media.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,600;1,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,8 +27,8 @@
         </div>
         <div class="right">
             <ul>
-                <li><a href="">ĐĂNG KÍ</a></li>
-                <li><a href="">ĐĂNG NHẬP</a></li>
+                
+                <li><a href=@Url.Action("Login","./Admin/Home/Login")>ĐĂNG NHẬP</a></li>
             </ul>
         </div>
 
@@ -39,14 +39,9 @@
         </div>
         <div class="sidebar" style="padding-left: 600px">
             <ul>
-                <li><a href=""> Trang Chủ </a></li>
+                <li><a href="@Url.Action("Index","Homeuser")"> Trang Chủ </a></li>
                 <li><a href=""> Giới Thiệu </a></li>
-                <li><a href=""> Đời Sống </a></li>
-                <li>
-                    <a href=""> Giải Trí</a>
-
-                </li>
-                <li><a href=""> Xã Hội </a></li>
+                @Html.Action("Menu", "HomeUser")
                 <li><a href=""> Liên Hệ </a></li>
                 <li>
                     <i class="fas fa-search"></i> <br>
@@ -145,8 +140,8 @@
             </div>
 
             <div class="footer-copyright text-center py-3">
-                © 2020 Copyright:
-                <a href="https://www.facebook.com/thisisdung/"> NguyenHuuDung</a>
+                © 2022 Copyright:
+                <a href="https://www.facebook.com/thisisdung/"> Nhóm 5</a>
             </div>
 
 

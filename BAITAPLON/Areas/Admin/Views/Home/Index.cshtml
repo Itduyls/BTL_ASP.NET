@@ -25,7 +25,9 @@
         <nav class="navbar navbar-expand fixed-top be-top-header">
             <div class="container-fluid">
                 <div class="be-navbar-header">
-                    <img src="~/Areas/Admin/assets/img/logo.png" alt="aaa" style="margin-left:auto; margin-right:auto" height="50px" />
+                    
+                        <img src="~/Areas/Admin/assets/img/logo.png" alt="aaa" onclick="home()" class="m-header-img" style="margin-left:auto; margin-right:auto" height="50px" />
+                   
                 </div>
                 <div class="page-title"><span>Tin cậy - Chính xác - Nhanh chóng</span></div>
                 <div class="be-right-navbar">
@@ -65,13 +67,13 @@
                                     <ul class="sub-menu">
 
                                         <li>
-                                            @Html.ActionLink("Thời sự", "Thoisu", "TinTucs")
+                                            @Html.ActionLink("Chính trị", "Thoisu", "TinTucs")
                                         </li>
                                         <li>
-                                            @Html.ActionLink("Giáo dục", "Giaoduc", "TinTucs")
+                                            @Html.ActionLink("Kinh tế", "Kinhte", "TinTucs")
                                         </li>
                                         <li>
-                                            @Html.ActionLink("Đời sống", "Doisong", "TinTucs")
+                                            @Html.ActionLink("Xã hội", "Xahoi", "TinTucs")
                                         </li>
 
                                     </ul>
@@ -179,6 +181,11 @@
             App.dashboard();
 
         });
+    </script>
+    <script>
+        function home() {
+            window.location = "/Admin/TinTucs/Index";
+        }
     </script>
 </body>
 </html>

@@ -17,6 +17,9 @@ namespace BAITAPLON.Areas.Admin.Controllers
         // GET: Admin/TinTucs
         public ActionResult Index(int? page)
         {
+            try
+            {
+
             var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
             ViewBag.nguoidung = db.NguoiDungs.ToList().Count;
             ViewBag.tacgia = db.TacGias.ToList().Count;
@@ -48,12 +51,19 @@ namespace BAITAPLON.Areas.Admin.Controllers
             ViewBag.sobai = liDate.ToList();
  
             return View(tinTucs.OrderBy(x=>x.Id_TinTuc).ToPagedList(pageNumber,pageSize));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // GET: Admin/TinTucs/Details/5
         public ActionResult Details(int? id)
         {
-           
+            try {   
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -64,15 +74,29 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 return HttpNotFound();
             }
             return View(tinTuc);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // GET: Admin/TinTucs/Create
         public ActionResult Create()
         {
-           
+            try { 
             ViewBag.Id_LoaiTinTuc = new SelectList(db.LoaiTinTucs, "Id_LoaiTinTuc", "Ten_LoaiTinTuc");
             ViewBag.Id_Tac_Gia = new SelectList(db.TacGias, "Id_Tac_Gia", "Ten_Tac_Gia");
             return View();
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // POST: Admin/TinTucs/Create
@@ -93,7 +117,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
                     {
                         string FileName = System.IO.Path.GetFileName(f.FileName);
                         TempData["file"] = FileName;
-                        string UploadPath = Server.MapPath("~/Areas/Admin/Data/img/" + FileName);
+                        string UploadPath = Server.MapPath("~/Areas/Admin/assets/img/content/" + FileName);
                         f.SaveAs(UploadPath);
                         tinTuc.img = FileName;
                     }
@@ -127,16 +151,16 @@ namespace BAITAPLON.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                ViewBag.Error = "Lỗi nhập dữ liệu! " + ex.Message;
-               
-                return View(tinTuc);
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
             }
         }
 
         // GET: Admin/TinTucs/Edit/5
         public ActionResult Edit(int? id)
         {
-           
+            try { 
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -149,6 +173,13 @@ namespace BAITAPLON.Areas.Admin.Controllers
             ViewBag.Id_LoaiTinTuc = new SelectList(db.LoaiTinTucs, "Id_LoaiTinTuc", "Ten_LoaiTinTuc", tinTuc.Id_LoaiTinTuc);
             ViewBag.Id_Tac_Gia = new SelectList(db.TacGias, "Id_Tac_Gia", "Ten_Tac_Gia", tinTuc.Id_Tac_Gia);
             return View(tinTuc);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // POST: Admin/TinTucs/Edit/5
@@ -159,6 +190,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "Id_TinTuc,Id_LoaiTinTuc,Ngay_Dang,Tieu_De,Noi_Dung,img,Ngay_Cap_Nhat,Trang_Thai,Id_Tac_Gia")] TinTuc tinTuc)
         {
+            try { 
             if (ModelState.IsValid)
             {
                 var f = Request.Files["img"];
@@ -166,11 +198,18 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 {
                     string FileName = System.IO.Path.GetFileName(f.FileName);
                     TempData["file"] = FileName;
-                    string UploadPath = Server.MapPath("~/Areas/Admin/Data/img/" + FileName);
+                    string UploadPath = Server.MapPath("~/Areas/Admin/assets/img/content/" + FileName);
                     f.SaveAs(UploadPath);
                     tinTuc.img = FileName;
                   
                 }
+                    if (TempData.ContainsKey("tacgia1"))
+                    {
+                        if (TempData["tacgia1"].ToString() == "Tác giả")
+                        {
+                            tinTuc.Trang_Thai = "Chưa duyệt";
+                        }
+                    }
                 tinTuc.Ngay_Cap_Nhat = DateTime.Now;
                 db.Entry(tinTuc).State = EntityState.Modified;
                 db.SaveChanges();
@@ -179,12 +218,19 @@ namespace BAITAPLON.Areas.Admin.Controllers
             ViewBag.Id_LoaiTinTuc = new SelectList(db.LoaiTinTucs, "Id_LoaiTinTuc", "Ten_LoaiTinTuc", tinTuc.Id_LoaiTinTuc);
             ViewBag.Id_Tac_Gia = new SelectList(db.TacGias, "Id_Tac_Gia", "Ten_Tac_Gia", tinTuc.Id_Tac_Gia);
             return View(tinTuc);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // GET: Admin/TinTucs/Delete/5
         public ActionResult Delete(int? id)
         {
-            
+            try { 
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -195,6 +241,13 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 return HttpNotFound();
             }
             return View(tinTuc);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
 
         // POST: Admin/TinTucs/Delete/5
@@ -218,6 +271,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         }
         public ActionResult Thoisu(int? page)
         {
+            try { 
             List<TinTuc> li = new List<TinTuc>();
            
             var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
@@ -230,15 +284,23 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 }
             }
            
-            ViewBag.tintuc = "Tin tức thời sự";
+            ViewBag.tintuc = "Tin tức chính trị";
             ViewBag.sobaiviet = li.Count();
 
             int pageNumber = (page ?? 1);
             int pageSize = 3;
             return View(li.OrderBy(x => x.Id_TinTuc).ToPagedList(pageNumber, pageSize)) ;
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
-        public ActionResult Giaoduc(int? page)
+        public ActionResult Kinhte(int? page)
         {
+            try { 
             List<TinTuc> li = new List<TinTuc>();
             var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
             foreach (var item in tinTucs.ToList())
@@ -249,15 +311,23 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 }
             }
            
-            ViewBag.tintuc = "Tin tức giáo dục";
+            ViewBag.tintuc = "Tin tức kinh tế";
             ViewBag.sobaiviet = li.Count();
 
             int pageNumber = (page ?? 1);
             int pageSize = 3;
             return View("Thoisu", li.OrderBy(x => x.Id_TinTuc).ToPagedList(pageNumber, pageSize));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
-        public ActionResult Doisong(int? page)
+        public ActionResult Xahoi(int? page)
         {
+            try { 
             List<TinTuc> li = new List<TinTuc>();
             var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
             foreach (var item in tinTucs.ToList())
@@ -268,15 +338,23 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 }
             }
            
-            ViewBag.tintuc = "Tin tức đời sống";
+            ViewBag.tintuc = "Tin tức xã hội";
             ViewBag.sobaiviet = li.Count();
 
             int pageNumber = (page ?? 1);
             int pageSize = 3;
             return View("Thoisu", li.OrderBy(x => x.Id_TinTuc).ToPagedList(pageNumber, pageSize));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
-        public ActionResult Search()
+        public ActionResult Search(int? page)
         {
+            try { 
             List<TinTuc> li = new List<TinTuc>();
             var key = Request.Form["search"].ToString();
             var tinTucs = db.TinTucs.Include(t => t.LoaiTinTuc).Include(t => t.TacGia);
@@ -287,7 +365,16 @@ namespace BAITAPLON.Areas.Admin.Controllers
                     li.Add(item);
                 }
             }
-            return View("Thoisu", li);
+            int pageNumber = (page ?? 1);
+            int pageSize = 3;
+            return View("Thoisu", li.OrderBy(x => x.Id_TinTuc).ToPagedList(pageNumber, pageSize));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
         }
        
     }

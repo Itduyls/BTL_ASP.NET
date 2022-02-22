@@ -9480,3 +9480,6 @@ a.badge-grey.focus, a.badge-grey:focus {
     color:red;
     font-size:14px;
 }
+.m-header-img{
+    cursor:pointer;
+              }

@@ -76,7 +76,7 @@
 
                     <td>
 
-                        <img src="~/Areas/Admin/Data/img/@item.img" alt="logo" width="100px" height="100px" />
+                        <img src="~/Areas/Admin/assets/img/content/@item.img" alt="logo" width="100px" height="100px" />
 
                     </td>
                     <td>
@@ -92,13 +92,14 @@
                         </form>
                         @if ((Session["FullName"].ToString() == item.TacGia.Ten_Tac_Gia && item.Trang_Thai == "Chưa duyệt") || Session["ChucVu"].ToString() == "Quản lý")
                         {
-                            <form class="details" action="Edit/@item.Id_TinTuc">
-                                <input class="edit-input" type="submit" value="Chỉnh sửa" name="edit" />
-                            </form>
-                            <form class="details" action="Delete/@item.Id_TinTuc">
-                                <input class="delete-input" type="submit" value="Xóa" name="delete" />
-                            </form>
-                        }
+                    <form class="details" action="Edit/@item.Id_TinTuc">
+                        <input class="edit-input" type="submit" value="Chỉnh sửa" name="edit" />
+                    </form>
+                                       
+                       <form onsubmit="return deleteNew()" class="delete" action="Delete?id=@item.Id_TinTuc" method="post">
+                           @Html.AntiForgeryToken()
+                            <input type="submit" class="delete-input" value="Xóa" />
+                         </form>}
                     </td>
                 </tr>
             }
@@ -112,3 +113,12 @@
     @Html.PagedListPager(Model, page => Url.Action("thoisu", "tintucs", new { page }))
 </div>
 
+<script>function deleteNew() {
+
+        if (confirm("Bạn chắc chắn muốn xóa ") == true) {
+            return true;
+        }
+        return false;
+
+
+    }</script>

@@ -1,0 +1,17 @@
+﻿.content_main {
+    display: flex;
+}
+.mid_main {
+    max-width: 1280px;
+}
+.left_main {
+    width: 350px;
+   
+}
+.right_main {
+    width: 350px;
+    background-image: src(img/dich-vu-thiet-ke-anh-quang-cao-facebook-1.png);
+    background-size:cover;
+
+    background-attachment:fixed;
+}

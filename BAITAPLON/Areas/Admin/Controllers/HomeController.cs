@@ -38,9 +38,7 @@ namespace BAITAPLON.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CheckLogin()
         {
-            
-
-
+            try { 
                 var username = Request.Form["username"];
                 var passwork = Request.Form["passwork"];
                 var data = db.TacGias.Where(s => s.Username.Equals(username) && s.Passwork.Equals(passwork)).ToList();
@@ -57,9 +55,15 @@ namespace BAITAPLON.Areas.Admin.Controllers
                 TempData["error"] = "Sai tên tài khoản hoặc mật khẩu.";
                     return RedirectToAction("Login");
                 }
-            
-           
-           
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+
+                return RedirectToAction("error", "home");
+            }
+
+
         }
 
 
@@ -68,6 +72,10 @@ namespace BAITAPLON.Areas.Admin.Controllers
             Session.Clear();//remove session
             return RedirectToAction("Login");
         }
-
+        public ActionResult Error()
+        {
+            ViewBag.Error = "Have error";
+            return View();
+        }
     }
 }

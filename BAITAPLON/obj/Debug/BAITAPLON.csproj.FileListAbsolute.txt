@@ -251,3 +251,356 @@ E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAI
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\PagedList.Mvc.dll
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\PagedList.xml
 E:\Lập trình ứng dụng cơ sở dữ liệu trên Web\BTLWIN\BAITAPLON\BAITAPLON\bin\PagedList.Mvc.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\BAITAPLON.dll.config
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\BAITAPLON.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\BAITAPLON.pdb
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csc.exe
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csc.exe.config
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csc.rsp
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csi.exe
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csi.exe.config
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csi.rsp
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.AppContext.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Console.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.IO.Compression.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Net.Http.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Net.Sockets.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.ValueTuple.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Xml.XPath.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\vbc.exe
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\vbc.exe.config
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\vbc.rsp
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\VBCSCompiler.exe
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Antlr3.Runtime.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\CKFinder.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\EntityFramework.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\EntityFramework.SqlServer.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Newtonsoft.Json.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\PagedList.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\PagedList.Mvc.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Helpers.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Mvc.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Optimization.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Razor.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.Deployment.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.Razor.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\WebGrease.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\CKFinder.pdb
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\EntityFramework.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\EntityFramework.SqlServer.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\PagedList.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\PagedList.Mvc.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Helpers.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Mvc.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Optimization.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Razor.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.Deployment.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.Razor.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Newtonsoft.Json.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Antlr3.Runtime.pdb
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.csproj.AssemblyReference.cache
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.csproj.CoreCompileInputs.cache
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.csproj.CopyComplete
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.dll
+C:\Users\datar\OneDrive\Máy tính\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.pdb
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\BAITAPLON.dll.config
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\BAITAPLON.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\BAITAPLON.pdb
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csc.exe
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csc.exe.config
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csc.rsp
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csi.exe
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csi.exe.config
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\csi.rsp
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.AppContext.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Collections.Immutable.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Console.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Globalization.Calendars.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.IO.Compression.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.IO.FileSystem.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Net.Http.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Net.Sockets.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Reflection.Metadata.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.ValueTuple.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Xml.XPath.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\vbc.exe
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\vbc.exe.config
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\vbc.rsp
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\VBCSCompiler.exe
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\roslyn\VBCSCompiler.exe.config
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Antlr3.Runtime.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\CKFinder.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\EntityFramework.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\EntityFramework.SqlServer.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Microsoft.Web.Infrastructure.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Newtonsoft.Json.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\PagedList.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\PagedList.Mvc.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Helpers.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Mvc.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Optimization.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Razor.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.Deployment.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.Razor.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\WebGrease.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\CKFinder.pdb
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\EntityFramework.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\EntityFramework.SqlServer.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\PagedList.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\PagedList.Mvc.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Helpers.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Mvc.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Optimization.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.Razor.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.Deployment.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\System.Web.WebPages.Razor.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Newtonsoft.Json.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Antlr3.Runtime.pdb
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.csproj.AssemblyReference.cache
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.csproj.CoreCompileInputs.cache
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.dll
+E:\ASP\BTL_ASP.NET-main (1)\BTL_ASP.NET-main\BAITAPLON\obj\Debug\BAITAPLON.pdb
+E:\ASP\BAITAPLON\bin\BAITAPLON.dll.config
+E:\ASP\BAITAPLON\bin\BAITAPLON.dll
+E:\ASP\BAITAPLON\bin\BAITAPLON.pdb
+E:\ASP\BAITAPLON\bin\roslyn\csc.exe
+E:\ASP\BAITAPLON\bin\roslyn\csc.exe.config
+E:\ASP\BAITAPLON\bin\roslyn\csc.rsp
+E:\ASP\BAITAPLON\bin\roslyn\csi.exe
+E:\ASP\BAITAPLON\bin\roslyn\csi.exe.config
+E:\ASP\BAITAPLON\bin\roslyn\csi.rsp
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ASP\BAITAPLON\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.AppContext.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Collections.Immutable.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Console.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Globalization.Calendars.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.IO.Compression.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.IO.FileSystem.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Net.Http.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Net.Sockets.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Reflection.Metadata.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.ValueTuple.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Xml.XPath.dll
+E:\ASP\BAITAPLON\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ASP\BAITAPLON\bin\roslyn\vbc.exe
+E:\ASP\BAITAPLON\bin\roslyn\vbc.exe.config
+E:\ASP\BAITAPLON\bin\roslyn\vbc.rsp
+E:\ASP\BAITAPLON\bin\roslyn\VBCSCompiler.exe
+E:\ASP\BAITAPLON\bin\roslyn\VBCSCompiler.exe.config
+E:\ASP\BAITAPLON\bin\Antlr3.Runtime.dll
+E:\ASP\BAITAPLON\bin\CKFinder.dll
+E:\ASP\BAITAPLON\bin\EntityFramework.dll
+E:\ASP\BAITAPLON\bin\EntityFramework.SqlServer.dll
+E:\ASP\BAITAPLON\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ASP\BAITAPLON\bin\Microsoft.Web.Infrastructure.dll
+E:\ASP\BAITAPLON\bin\Newtonsoft.Json.dll
+E:\ASP\BAITAPLON\bin\PagedList.dll
+E:\ASP\BAITAPLON\bin\PagedList.Mvc.dll
+E:\ASP\BAITAPLON\bin\System.Web.Helpers.dll
+E:\ASP\BAITAPLON\bin\System.Web.Mvc.dll
+E:\ASP\BAITAPLON\bin\System.Web.Optimization.dll
+E:\ASP\BAITAPLON\bin\System.Web.Razor.dll
+E:\ASP\BAITAPLON\bin\System.Web.WebPages.Deployment.dll
+E:\ASP\BAITAPLON\bin\System.Web.WebPages.dll
+E:\ASP\BAITAPLON\bin\System.Web.WebPages.Razor.dll
+E:\ASP\BAITAPLON\bin\WebGrease.dll
+E:\ASP\BAITAPLON\bin\CKFinder.pdb
+E:\ASP\BAITAPLON\bin\EntityFramework.xml
+E:\ASP\BAITAPLON\bin\EntityFramework.SqlServer.xml
+E:\ASP\BAITAPLON\bin\PagedList.xml
+E:\ASP\BAITAPLON\bin\PagedList.Mvc.xml
+E:\ASP\BAITAPLON\bin\System.Web.Helpers.xml
+E:\ASP\BAITAPLON\bin\System.Web.Mvc.xml
+E:\ASP\BAITAPLON\bin\System.Web.Optimization.xml
+E:\ASP\BAITAPLON\bin\System.Web.Razor.xml
+E:\ASP\BAITAPLON\bin\System.Web.WebPages.xml
+E:\ASP\BAITAPLON\bin\System.Web.WebPages.Deployment.xml
+E:\ASP\BAITAPLON\bin\System.Web.WebPages.Razor.xml
+E:\ASP\BAITAPLON\bin\Newtonsoft.Json.xml
+E:\ASP\BAITAPLON\bin\Antlr3.Runtime.pdb
+E:\ASP\BAITAPLON\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ASP\BAITAPLON\obj\Debug\BAITAPLON.csproj.AssemblyReference.cache
+E:\ASP\BAITAPLON\obj\Debug\BAITAPLON.csproj.CoreCompileInputs.cache
+E:\ASP\BAITAPLON\obj\Debug\BAITAPLON.dll
+E:\ASP\BAITAPLON\obj\Debug\BAITAPLON.pdb
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\BAITAPLON.dll.config
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\BAITAPLON.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\BAITAPLON.pdb
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\csc.exe
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\csc.exe.config
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\csc.rsp
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\csi.exe
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\csi.exe.config
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\csi.rsp
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.AppContext.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Collections.Immutable.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Console.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Globalization.Calendars.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.IO.Compression.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.IO.FileSystem.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Net.Http.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Net.Sockets.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Reflection.Metadata.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.ValueTuple.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Xml.XPath.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\vbc.exe
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\vbc.exe.config
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\vbc.rsp
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\VBCSCompiler.exe
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\roslyn\VBCSCompiler.exe.config
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\Antlr3.Runtime.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\CKFinder.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\EntityFramework.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\EntityFramework.SqlServer.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\Microsoft.Web.Infrastructure.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\Newtonsoft.Json.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\PagedList.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\PagedList.Mvc.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.Helpers.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.Mvc.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.Optimization.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.Razor.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.WebPages.Deployment.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.WebPages.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.WebPages.Razor.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\WebGrease.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\CKFinder.pdb
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\EntityFramework.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\EntityFramework.SqlServer.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\PagedList.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\PagedList.Mvc.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.Helpers.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.Mvc.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.Optimization.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.Razor.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.WebPages.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.WebPages.Deployment.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\System.Web.WebPages.Razor.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\Newtonsoft.Json.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\Antlr3.Runtime.pdb
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\obj\Debug\BAITAPLON.csproj.AssemblyReference.cache
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\obj\Debug\BAITAPLON.csproj.CoreCompileInputs.cache
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\obj\Debug\BAITAPLON.dll
+E:\Nhom_05_TinTucThoiSu_HuaVanDuy\Nhom5_TinTucThoiSu\BAITAPLON\obj\Debug\BAITAPLON.pdb
